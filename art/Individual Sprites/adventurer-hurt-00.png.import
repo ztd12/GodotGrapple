@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/adventurer-hurt-00.png-631219fa9a4989009b2017318395da0a.stex"
+path="res://.import/adventurer-hurt-00.png-03c36e50f48b315baeb3af40457370ef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Individual Sprites/adventurer-hurt-00.png"
-dest_files=[ "res://.import/adventurer-hurt-00.png-631219fa9a4989009b2017318395da0a.stex" ]
+source_file="res://Art/Individual Sprites/adventurer-hurt-00.png"
+dest_files=[ "res://.import/adventurer-hurt-00.png-03c36e50f48b315baeb3af40457370ef.stex" ]
 
 [params]
 

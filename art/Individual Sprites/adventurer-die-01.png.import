@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/adventurer-die-01.png-1805d5b7ac02215c0d9f4f7789331c6c.stex"
+path="res://.import/adventurer-die-01.png-a0e8c14973dbb9d0c86162cbef45c700.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Individual Sprites/adventurer-die-01.png"
-dest_files=[ "res://.import/adventurer-die-01.png-1805d5b7ac02215c0d9f4f7789331c6c.stex" ]
+source_file="res://Art/Individual Sprites/adventurer-die-01.png"
+dest_files=[ "res://.import/adventurer-die-01.png-a0e8c14973dbb9d0c86162cbef45c700.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/adventurer-stand-00.png-a3fde4301d599d5302a5a49c4066206d.stex"
+path="res://.import/adventurer-stand-00.png-719186259f444acf3ce128d0f316e8fb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Individual Sprites/adventurer-stand-00.png"
-dest_files=[ "res://.import/adventurer-stand-00.png-a3fde4301d599d5302a5a49c4066206d.stex" ]
+source_file="res://Art/Individual Sprites/adventurer-stand-00.png"
+dest_files=[ "res://.import/adventurer-stand-00.png-719186259f444acf3ce128d0f316e8fb.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/adventurer-attack2-03.png-2994475c01ee115cedf68de714b18939.stex"
+path="res://.import/adventurer-attack2-03.png-97d13f45c1e6946584f0cfa057598192.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Individual Sprites/adventurer-attack2-03.png"
-dest_files=[ "res://.import/adventurer-attack2-03.png-2994475c01ee115cedf68de714b18939.stex" ]
+source_file="res://Art/Individual Sprites/adventurer-attack2-03.png"
+dest_files=[ "res://.import/adventurer-attack2-03.png-97d13f45c1e6946584f0cfa057598192.stex" ]
 
 [params]
 

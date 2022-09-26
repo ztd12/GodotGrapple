@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/adventurer-fall-01.png-6468da38963d41b45d54e55cd0e7d528.stex"
+path="res://.import/adventurer-fall-01.png-789db0d786eaee04a574ce6b2e28dc00.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Individual Sprites/adventurer-fall-01.png"
-dest_files=[ "res://.import/adventurer-fall-01.png-6468da38963d41b45d54e55cd0e7d528.stex" ]
+source_file="res://Art/Individual Sprites/adventurer-fall-01.png"
+dest_files=[ "res://.import/adventurer-fall-01.png-789db0d786eaee04a574ce6b2e28dc00.stex" ]
 
 [params]
 

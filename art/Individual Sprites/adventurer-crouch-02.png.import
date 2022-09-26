@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/adventurer-crouch-02.png-71bd3097245634b1d7a24cbe9f9e7176.stex"
+path="res://.import/adventurer-crouch-02.png-a45c971ba371fa8f20231a9d5d0171a8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Individual Sprites/adventurer-crouch-02.png"
-dest_files=[ "res://.import/adventurer-crouch-02.png-71bd3097245634b1d7a24cbe9f9e7176.stex" ]
+source_file="res://Art/Individual Sprites/adventurer-crouch-02.png"
+dest_files=[ "res://.import/adventurer-crouch-02.png-a45c971ba371fa8f20231a9d5d0171a8.stex" ]
 
 [params]
 
