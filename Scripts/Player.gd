@@ -24,7 +24,9 @@ func _physics_process(delta: float) -> void:
 	_velocity.x = _horizontal_direction * speed
 	_velocity.y += gravity * delta
 	
-	var is_attacking := Input.is_action_just_pressed("attack") 
+	#variables representing current action
+	var is_dodging := Input.is_action_just_pressed("dodge") and is_on_floor() # maybe TODO: change so that we can dodge on air too?
+	var is_attacking := Input.is_action_just_pressed("attack") and not is_dodging 
 	var is_falling := _velocity.y > 0.0 and not is_on_floor()
 	var is_jumping := Input.is_action_just_pressed("jump") and is_on_floor()
 	var is_double_jumping := Input.is_action_just_pressed("jump") and is_falling
@@ -32,11 +34,11 @@ func _physics_process(delta: float) -> void:
 	var is_idling := is_on_floor() and is_zero_approx(_velocity.x)
 	var is_running := is_on_floor() and not is_zero_approx(_velocity.x)
 	#TODO var is_hurt
-	#TODO var is_dodging
 	#TODO var is_crouching
 	#TODO var is_dead
 	#TODO var is_grappling
 	#maybe TODO: var is_sliding, var is_slide_to_stand
+	#TODO doddging and sliding  requires iframes***
 	
 	if is_jumping:
 		_jumps_made += 1
@@ -65,8 +67,11 @@ func _physics_process(delta: float) -> void:
 	
 	
 	#play correct animation
+	#TODO when dodging or crouching/sliding, make sure to change hitbox
 	if is_attacking:
 		$AnimatedSprite.play("fight")
+	if is_dodging:
+		$AnimatedSprite.play("dodge")
 		
 	if is_jumping or is_double_jumping:
 		if $AnimatedSprite.animation == "fight" and $AnimatedSprite.is_playing():
@@ -75,7 +80,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			$AnimatedSprite.play("jump")
 	elif is_running:
-		if $AnimatedSprite.animation == "fight" and $AnimatedSprite.is_playing():
+		if ($AnimatedSprite.animation == "fight" or $AnimatedSprite.animation =="dodge") and $AnimatedSprite.is_playing():
 			yield($AnimatedSprite, "animation_finished")
 			$AnimatedSprite.play("run")
 		else:

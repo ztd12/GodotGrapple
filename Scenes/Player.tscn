@@ -65,7 +65,7 @@ animations = [ {
 "frames": [ ExtResource( 42 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 46 ) ],
 "loop": false,
 "name": "dodge",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [ ExtResource( 30 ), ExtResource( 31 ) ],
 "loop": true,
@@ -123,6 +123,6 @@ shape = SubResource( 2 )
 position = Vector2( 1, -8.125 )
 scale = Vector2( 1.5, 1.50676 )
 frames = SubResource( 1 )
-animation = "slide-to-stand"
-frame = 2
+animation = "dodge"
+frame = 3
 playing = true
