@@ -13,6 +13,10 @@ position = Vector2( 197, 234 )
 motion/sync_to_physics = false
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 0, 265 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D"]
 position = Vector2( 227.75, 290 )
