@@ -13,7 +13,7 @@ var air_friction = 10
 var velocity := Vector2.ZERO
 var jumps_made = 0
 
-onready var ground_ray = get_node("")
+onready var ground_ray = get_node("ground_check_ray")
 
 func get_input_direction() -> float:
 	var direction = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
@@ -25,7 +25,7 @@ func get_input_direction() -> float:
 		
 	return direction 
 	
-func on_ground() -> bool:
+func on_floor() -> bool:
 	if ground_ray.is_colliding():
 		return true
 	else:

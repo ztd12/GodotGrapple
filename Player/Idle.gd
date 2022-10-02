@@ -12,7 +12,7 @@ func physics_update(delta: float) -> void:
 	player.jumps_made = 0
 	
 		
-	if not player.is_on_floor():
+	if not player.on_floor():
 		state_machine.transition_to("Fall")
 		return 
 		

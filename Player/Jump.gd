@@ -27,7 +27,7 @@ func physics_update(delta: float) -> void:
 	if player.velocity.y > 0:
 		state_machine.transition_to("Fall")
 	
-	if player.is_on_floor():
+	if player.on_floor():
 		if is_zero_approx(player.get_input_direction()):
 			state_machine.transition_to("Idle")
 		else:

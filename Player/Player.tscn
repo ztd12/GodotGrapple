@@ -187,8 +187,12 @@ position = Vector2( 1, -8.125 )
 scale = Vector2( 1.5, 1.50676 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 3
+frame = 2
 playing = true
+
+[node name="ground_check_ray" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, 20 )
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 47 )

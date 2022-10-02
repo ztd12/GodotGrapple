@@ -22,7 +22,7 @@ func physics_update(delta: float) -> void:
 	if (player.jumps_made < player.maximum_jumps) and Input.is_action_just_pressed("jump"):
 		state_machine.transition_to("Jump")
 	
-	if player.is_on_floor():
+	if player.on_floor():
 		print(player.get_input_direction())
 		if is_zero_approx(player.get_input_direction()):
 			state_machine.transition_to("Idle")
