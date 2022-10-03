@@ -4,7 +4,7 @@
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 198.5, 9 )
+extents = Vector2( 487.5, 9 )
 
 [node name="Main" type="Node2D"]
 
@@ -19,10 +19,10 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 227.75, 290 )
-scale = Vector2( 6.32031, 0.304687 )
+position = Vector2( 515.75, 290 )
+scale = Vector2( 15.3203, 0.304687 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 230.5, 289 )
+position = Vector2( 519.5, 289 )
 shape = SubResource( 1 )

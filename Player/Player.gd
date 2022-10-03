@@ -2,12 +2,14 @@ class_name Player
 extends KinematicBody2D
 
 var speed = 200
-var jump_impulse = 800 
+var jump_impulse = 700 
 var maximum_jumps := 2 
 var gravity = 2500
 var acceleration = 60
 var friction = 20 
-var air_friction = 10 
+var air_friction = 10
+var slide_speed = 300
+var dodge_speed = 400
 
 var velocity := Vector2.ZERO
 var jumps_made = 0
