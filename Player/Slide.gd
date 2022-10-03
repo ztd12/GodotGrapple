@@ -26,5 +26,9 @@ func physics_update(delta: float) -> void:
 		state_machine.transition_to("Jump")
 	elif is_zero_approx(player.get_input_direction()):
 		state_machine.transition_to("Idle")
-	# TODO if animation finishes go to idle or run
-	# TODO make speed get slower as times goes on?
+	elif animated_sprite.get_frame() == 5:
+		if Input.is_action_just_pressed("run"):
+			state_machine.transition_to("Run")
+		state_machine.transition_to("Idle")
+		# TODO make speed get slower as times goes on
+		# slide is faster than dodge, but makes you vulnerable

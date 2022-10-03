@@ -8,7 +8,7 @@ var gravity = 2500
 var acceleration = 60
 var friction = 20 
 var air_friction = 10
-var slide_speed = 300
+var slide_speed = 500
 var dodge_speed = 400
 
 var velocity := Vector2.ZERO

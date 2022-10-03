@@ -18,7 +18,7 @@ func physics_update(delta: float) -> void:
 		player.velocity.x = lerp(player.velocity.x, 
 								player.get_input_direction() * player.dodge_speed,
 								player.acceleration * delta)
-		
+	
 	player.velocity.y += player.gravity * delta
 	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)
 	
@@ -26,6 +26,11 @@ func physics_update(delta: float) -> void:
 		state_machine.transition_to("Jump")
 	elif is_zero_approx(player.get_input_direction()):
 		state_machine.transition_to("Idle")
-	#TODO If animation finished go to idle or run
+	elif animated_sprite.get_frame() == 5:
+		if Input.is_action_just_pressed("run"):
+			state_machine.transition_to("Run")
+		state_machine.transition_to("Idle")
+
 	#TODO add iframes
 	#TODO fix hitbox
+	#dodge is slower than slide, but makes gives you iframes
