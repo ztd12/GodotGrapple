@@ -31,4 +31,9 @@ func physics_update(delta: float) -> void:
 			state_machine.transition_to("Run")
 		state_machine.transition_to("Idle")
 		# TODO make speed get slower as times goes on
+		
+		#If we want to make slide slower as time goes on then use this for player.velocity.x:
+		#	player.velocity = lerp(player.velocity.x,
+		#						  0, player.friciton * delta)
+		
 		# slide is faster than dodge, but makes you vulnerable

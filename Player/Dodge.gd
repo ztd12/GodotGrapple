@@ -30,7 +30,8 @@ func physics_update(delta: float) -> void:
 		if Input.is_action_just_pressed("run"):
 			state_machine.transition_to("Run")
 		state_machine.transition_to("Idle")
-
+		
+		
 	#TODO add iframes
 	#TODO fix hitbox
 	#dodge is slower than slide, but makes gives you iframes
