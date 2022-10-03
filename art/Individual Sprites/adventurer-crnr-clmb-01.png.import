@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/adventurer-crnr-clmb-01.png-fb248c49b1103fb510f36eec4915deac.stex"
+path="res://.import/adventurer-crnr-clmb-01.png-002d9dd65e32be8ff93c9b481324d74a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Individual Sprites/adventurer-crnr-clmb-01.png"
-dest_files=[ "res://.import/adventurer-crnr-clmb-01.png-fb248c49b1103fb510f36eec4915deac.stex" ]
+source_file="res://art/Individual Sprites/adventurer-crnr-clmb-01.png"
+dest_files=[ "res://.import/adventurer-crnr-clmb-01.png-002d9dd65e32be8ff93c9b481324d74a.stex" ]
 
 [params]
 
