@@ -21,10 +21,25 @@ func physics_update(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("jump"):
 		state_machine.transition_to("Jump")
+	elif Input.is_action_just_pressed("attack"):
+		state_machine.transition_to("Attack1")
 	elif Input.is_action_just_pressed("dodge"):
 		state_machine.transition_to("Dodge")
 	elif not is_zero_approx(player.get_input_direction()):
 		state_machine.transition_to("Run")
-			
+	
+	#if you want to use different idle animations depending on the state you can send a bool, line 
+	#it was done before with air state: {prev_state = "Run"}
+	
+	#ex: 
+	#In some state:
+	#if Input.is_action_just_pressed("move_up"):
+	#	state_machine.transition_to("Air", {do_jump = true})
+	
+	#in air state:
+	#func enter(msg := {}) -> void:
+	#	if msg.has("do_jump"):
+	#		player.velocity.y = -player.jump_impulse
+ 
 		
 

@@ -27,7 +27,7 @@ func physics_update(delta: float) -> void:
 	elif is_zero_approx(player.get_input_direction()):
 		state_machine.transition_to("Idle")
 	elif animated_sprite.get_frame() == 5:
-		if Input.is_action_just_pressed("run"):
+		if Input.is_action_just_pressed("move_left") or Input.is_action_just_pressed("move_right"):
 			state_machine.transition_to("Run")
 		state_machine.transition_to("Idle")
 		

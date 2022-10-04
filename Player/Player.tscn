@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=2]
+[gd_scene load_steps=85 format=2]
 
 [ext_resource path="res://Player/Individual Sprites/adventurer-attack2-03.png" type="Texture" id=1]
 [ext_resource path="res://Player/Individual Sprites/adventurer-hurt-02.png" type="Texture" id=2]
@@ -81,6 +81,7 @@
 [ext_resource path="res://Player/Slide.gd" type="Script" id=79]
 [ext_resource path="res://Player/Fall.gd" type="Script" id=80]
 [ext_resource path="res://Player/Individual Sprites/adventurer-stand-00.png" type="Texture" id=81]
+[ext_resource path="res://Player/Attack.gd" type="Script" id=82]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 11, 21.5 )
@@ -226,3 +227,28 @@ _animation = NodePath("../../AnimatedSprite")
 [node name="Slide" type="Node" parent="StateMachine"]
 script = ExtResource( 79 )
 _animation = NodePath("../../AnimatedSprite")
+
+[node name="Attack1" type="Node" parent="StateMachine"]
+script = ExtResource( 82 )
+_animation = NodePath("../../AnimatedSprite")
+timer = NodePath("../../AttackTimer")
+anim = "attack1"
+next_state = "Attack2"
+
+[node name="Attack2" type="Node" parent="StateMachine"]
+script = ExtResource( 82 )
+_animation = NodePath("../../AnimatedSprite")
+timer = NodePath("../../AttackTimer")
+anim = "attack2"
+next_state = "Attack3"
+
+[node name="Attack3" type="Node" parent="StateMachine"]
+script = ExtResource( 82 )
+_animation = NodePath("../../AnimatedSprite")
+timer = NodePath("../../AttackTimer")
+anim = "attack3"
+
+[node name="AttackTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
