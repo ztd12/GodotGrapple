@@ -25,7 +25,7 @@ func physics_update(delta: float) -> void:
 		state_machine.transition_to("Jump")	
 	
 	if Input.is_action_just_pressed("attack"):
-		state_machine.transition_to("Attack1")	
+		state_machine.transition_to("Attack")	
 	
 	if player.is_on_floor():
 		if is_zero_approx(player.get_input_direction()):

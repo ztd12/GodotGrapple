@@ -26,7 +26,7 @@ func physics_update(delta: float) -> void:
 	if Input.is_action_just_pressed("jump"):
 		state_machine.transition_to("Jump")
 	elif Input.is_action_just_pressed("attack"):
-		state_machine.transition_to("Attack1")
+		state_machine.transition_to("Attack")
 	elif Input.is_action_just_pressed("dodge"):
 		state_machine.transition_to("Dodge")
 	elif Input.is_action_just_pressed("crouch"):

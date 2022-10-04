@@ -91,17 +91,17 @@ animations = [ {
 "frames": [ ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 65 ), ExtResource( 69 ) ],
 "loop": false,
 "name": "attack1",
-"speed": 14.0
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 20 ), ExtResource( 22 ), ExtResource( 37 ), ExtResource( 1 ), ExtResource( 18 ), ExtResource( 14 ) ],
 "loop": false,
 "name": "attack2",
-"speed": 14.0
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 62 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 61 ) ],
 "loop": false,
 "name": "attack3",
-"speed": 14.0
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 55 ), ExtResource( 56 ), ExtResource( 54 ), ExtResource( 57 ), ExtResource( 58 ) ],
 "loop": true,
@@ -194,6 +194,7 @@ position = Vector2( 1, -8.125 )
 scale = Vector2( 1.5, 1.50676 )
 frames = SubResource( 1 )
 animation = "crnr_jmp"
+frame = 2
 playing = true
 
 [node name="ground_check_ray" type="RayCast2D" parent="."]
@@ -228,27 +229,12 @@ _animation = NodePath("../../AnimatedSprite")
 script = ExtResource( 79 )
 _animation = NodePath("../../AnimatedSprite")
 
-[node name="Attack1" type="Node" parent="StateMachine"]
+[node name="Attack" type="Node" parent="StateMachine"]
 script = ExtResource( 82 )
 _animation = NodePath("../../AnimatedSprite")
 timer = NodePath("../../AttackTimer")
-anim = "attack1"
-next_state = "Attack2"
-
-[node name="Attack2" type="Node" parent="StateMachine"]
-script = ExtResource( 82 )
-_animation = NodePath("../../AnimatedSprite")
-timer = NodePath("../../AttackTimer")
-anim = "attack2"
-next_state = "Attack3"
-
-[node name="Attack3" type="Node" parent="StateMachine"]
-script = ExtResource( 82 )
-_animation = NodePath("../../AnimatedSprite")
-timer = NodePath("../../AttackTimer")
-anim = "attack3"
 
 [node name="AttackTimer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 0.5
 one_shot = true
-
-[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

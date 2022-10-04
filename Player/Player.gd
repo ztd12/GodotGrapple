@@ -10,11 +10,7 @@ var friction = 20
 var air_friction = 10
 var slide_speed = 500
 var dodge_speed = 400
-###
-var can_input = true # for attack
-var prev = null
-var curr = null
-###
+
 var velocity := Vector2.ZERO
 var jumps_made = 0
 
@@ -41,16 +37,3 @@ func on_floor() -> bool:
 	else:
 		return false
 		
-
-
-
-
-func _on_AnimatedSprite_animation_finished(): #remember to disconnect me
-	pass
-	#prev = curr
-	#curr = $AnimatedSprite.get_animation()
-	
-	
-	
-	#if prev != null and prev == "attack1":
-		#can_input = true #for attack

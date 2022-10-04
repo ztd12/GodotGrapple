@@ -30,7 +30,7 @@ func physics_update(delta: float) -> void:
 		state_machine.transition_to("Fall")	
 		
 	if Input.is_action_just_pressed("attack"):
-		state_machine.transition_to("Attack1")	
+		state_machine.transition_to("Attack")	
 	
 	if player.is_on_floor(): #ALWAYS USE is_on_floor() RIGHT AFTER move_and_slide()
 		if is_zero_approx(player.get_input_direction()):

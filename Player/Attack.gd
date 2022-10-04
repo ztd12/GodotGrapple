@@ -8,15 +8,24 @@ onready var animated_sprite: AnimatedSprite = get_node(_animation)
 export(NodePath) var timer
 onready var attack_timer = get_node(timer)
 
-export var anim: String
-export var next_state: String
+var states = ["attack1","attack2","attack3"]
 
-#var action_pressed = false 
+var state_position
+
+
 
 func enter(_msg := {}) -> void:
-	animated_sprite.play(anim)
-	#player.can_input = false
-	#action_pressed = false
+	if attack_timer.get_time_left() == 0:
+		state_position = 0
+		animated_sprite.play(states[state_position])
+	elif attack_timer.get_time_left() != 0:
+		if state_position == 2:
+			state_position = 0
+			animated_sprite.play(states[state_position])
+		else:
+			state_position += 1
+			animated_sprite.play(states[state_position])
+		
 	
 func physics_update(delta: float) -> void:
 	
@@ -32,15 +41,13 @@ func physics_update(delta: float) -> void:
 	player.velocity.y += player.gravity * delta
 	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)
 	
-	#if Input.is_action_just_pressed("attack"):
-	#	action_pressed = true
-	if next_state and Input.is_action_just_pressed("attack") and (att1 or att2 or att3):
-		state_machine.transition_to(next_state)
 	
 	if Input.is_action_just_pressed("jump") and player.on_floor():
 		state_machine.transition_to("Jump")
 	
-	#if  att1 or player.get_input_direction() != 0.0:#some bug
+	print(attack_timer.get_time_left())
+	
 	if (att1 or att2 or att3):
+		attack_timer.start()
 		state_machine.transition_to("Idle")
 		
