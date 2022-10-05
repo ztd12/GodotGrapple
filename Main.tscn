@@ -7,6 +7,5 @@
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 197, 234 )
-motion/sync_to_physics = false
 
 [node name="ForestLevel" parent="." instance=ExtResource( 1 )]
