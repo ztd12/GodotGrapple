@@ -42,7 +42,7 @@ func physics_update(delta: float) -> void:
 	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)
 	
 	
-	if Input.is_action_just_pressed("jump") and player.on_floor():
+	if Input.is_action_just_pressed("jump") and player.is_on_floor():
 		state_machine.transition_to("Jump")
 	
 	print(attack_timer.get_time_left())
