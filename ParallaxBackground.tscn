@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Levels/mountainLevel/Glacial-mountains-parallax-background_vnitti/Layers/sky.png" type="Texture" id=1]
-[ext_resource path="res://Levels/mountainLevel/Glacial-mountains-parallax-background_vnitti/Layers/glacial_mountains.png" type="Texture" id=2]
-[ext_resource path="res://Levels/mountainLevel/Glacial-mountains-parallax-background_vnitti/Layers/cloud_lonely.png" type="Texture" id=3]
-[ext_resource path="res://Levels/mountainLevel/Glacial-mountains-parallax-background_vnitti/Layers/clouds_mg_2.png" type="Texture" id=4]
-[ext_resource path="res://Levels/mountainLevel/Glacial-mountains-parallax-background_vnitti/Layers/clouds_mg_3.png" type="Texture" id=5]
-[ext_resource path="res://Levels/mountainLevel/Glacial-mountains-parallax-background_vnitti/Layers/clouds_mg_1.png" type="Texture" id=6]
+[ext_resource path="res://mountainLevel/Glacial-mountains-parallax-background_vnitti/Layers/sky.png" type="Texture" id=1]
+[ext_resource path="res://mountainLevel/Glacial-mountains-parallax-background_vnitti/Layers/glacial_mountains.png" type="Texture" id=2]
+[ext_resource path="res://mountainLevel/Glacial-mountains-parallax-background_vnitti/Layers/cloud_lonely.png" type="Texture" id=3]
+[ext_resource path="res://mountainLevel/Glacial-mountains-parallax-background_vnitti/Layers/clouds_mg_2.png" type="Texture" id=4]
+[ext_resource path="res://mountainLevel/Glacial-mountains-parallax-background_vnitti/Layers/clouds_mg_3.png" type="Texture" id=5]
+[ext_resource path="res://mountainLevel/Glacial-mountains-parallax-background_vnitti/Layers/clouds_mg_1.png" type="Texture" id=6]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 scale = Vector2( 3, 3 )

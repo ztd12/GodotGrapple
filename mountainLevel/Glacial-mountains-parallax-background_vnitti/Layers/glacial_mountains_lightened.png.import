@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Glacial_Mountains-Cover.png-74a30849e41a4a015f3b29583d9917f1.stex"
+path="res://.import/glacial_mountains_lightened.png-c9275549ef052a081e9a8c2953064c06.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Levels/mountainLevel/Glacial-mountains-parallax-background_vnitti/Glacial_Mountains-Cover.png"
-dest_files=[ "res://.import/Glacial_Mountains-Cover.png-74a30849e41a4a015f3b29583d9917f1.stex" ]
+source_file="res://mountainLevel/Glacial-mountains-parallax-background_vnitti/Layers/glacial_mountains_lightened.png"
+dest_files=[ "res://.import/glacial_mountains_lightened.png-c9275549ef052a081e9a8c2953064c06.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
