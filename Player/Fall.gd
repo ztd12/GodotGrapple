@@ -10,7 +10,6 @@ func enter(_msg := {}) -> void:
 	
 func physics_update(delta: float) -> void:
 	
-	
 	if not is_zero_approx(player.get_input_direction()):
 		player.velocity.x = lerp(player.velocity.x, 
 								player.get_input_direction() * player.speed, 

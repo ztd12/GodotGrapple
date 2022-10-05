@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/IEROD1905416-military-1905416-320.mp3-86468ccfcdda171dd475ee7f6a627640.mp3str"
+
+[deps]
+
+source_file="res://ForestLevel/art/IEROD1905416-military-1905416-320.mp3"
+dest_files=[ "res://.import/IEROD1905416-military-1905416-320.mp3-86468ccfcdda171dd475ee7f6a627640.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
