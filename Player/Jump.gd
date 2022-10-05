@@ -7,6 +7,7 @@ onready var animated_sprite: AnimatedSprite = get_node(_animation)
 func enter(_msg := {}) -> void:
 	player.jumps_made += 1
 	player.velocity.y = -player.jump_impulse
+	$JumpSound.play()
 	animated_sprite.play("jump")
 	
 	

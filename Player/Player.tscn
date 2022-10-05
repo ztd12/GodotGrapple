@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=2]
+[gd_scene load_steps=86 format=2]
 
 [ext_resource path="res://Player/Individual Sprites/adventurer-attack2-03.png" type="Texture" id=1]
 [ext_resource path="res://Player/Individual Sprites/adventurer-hurt-02.png" type="Texture" id=2]
@@ -49,6 +49,7 @@
 [ext_resource path="res://Player/StateMachine.gd" type="Script" id=47]
 [ext_resource path="res://Player/Idle.gd" type="Script" id=48]
 [ext_resource path="res://Player/Run.gd" type="Script" id=49]
+[ext_resource path="res://Player/jump_sound.mp3" type="AudioStream" id=50]
 [ext_resource path="res://Player/Individual Sprites/adventurer-crnr-grb-02.png" type="Texture" id=51]
 [ext_resource path="res://Player/Individual Sprites/adventurer-crnr-grb-03.png" type="Texture" id=52]
 [ext_resource path="res://Player/Individual Sprites/adventurer-crnr-grb-01.png" type="Texture" id=53]
@@ -81,6 +82,7 @@
 [ext_resource path="res://Player/Fall.gd" type="Script" id=80]
 [ext_resource path="res://Player/Individual Sprites/adventurer-stand-00.png" type="Texture" id=81]
 [ext_resource path="res://Player/Attack.gd" type="Script" id=82]
+[ext_resource path="res://Player/Swordsound (1).mp3" type="AudioStream" id=83]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 11, 21.5 )
@@ -210,6 +212,10 @@ _animation = NodePath("../../AnimatedSprite")
 script = ExtResource( 78 )
 _animation = NodePath("../../AnimatedSprite")
 
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="StateMachine/Jump"]
+stream = ExtResource( 50 )
+volume_db = 15.782
+
 [node name="Fall" type="Node" parent="StateMachine"]
 script = ExtResource( 80 )
 _animation = NodePath("../../AnimatedSprite")
@@ -226,6 +232,10 @@ _animation = NodePath("../../AnimatedSprite")
 script = ExtResource( 82 )
 _animation = NodePath("../../AnimatedSprite")
 timer = NodePath("../../AttackTimer")
+
+[node name="SwordSwing" type="AudioStreamPlayer" parent="StateMachine/Attack"]
+stream = ExtResource( 83 )
+volume_db = 6.573
 
 [node name="AttackTimer" type="Timer" parent="."]
 process_mode = 0

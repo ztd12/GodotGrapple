@@ -25,7 +25,7 @@ func enter(_msg := {}) -> void:
 		else:
 			state_position += 1
 			animated_sprite.play(states[state_position])
-		
+	$SwordSwing.play()
 	
 func physics_update(delta: float) -> void:
 	
