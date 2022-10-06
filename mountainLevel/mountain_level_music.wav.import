@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mountain_level_music.wav-59d32a2438f3422efc774199f32ce107.sample"
+
+[deps]
+
+source_file="res://mountainLevel/mountain_level_music.wav"
+dest_files=[ "res://.import/mountain_level_music.wav-59d32a2438f3422efc774199f32ce107.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=1
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

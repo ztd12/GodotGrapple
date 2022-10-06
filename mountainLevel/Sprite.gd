@@ -13,4 +13,4 @@ func _process(delta: float) -> void:
 	
 func _attempt_reposition() -> void:
 	if position.x < -g_texture_width:
-		position.x += 2 * g_texture_width
+		position.x += 5 * g_texture_width
