@@ -7,7 +7,7 @@ export(NodePath) var _hk
 onready var grppl: Node2D = get_node(_hk)
 
 func enter(_msg := {}) -> void:
-	animated_sprite.play("crnr-jmp")
+	animated_sprite.play("crnr_jmp")
 
 func physics_update(delta: float) -> void:
 	# Hook physics
@@ -31,10 +31,20 @@ func physics_update(delta: float) -> void:
 	player.velocity += player.chain_velocity
 	
 	player.velocity.y += player.gravity * delta
+	
+	player.velocity.y = clamp(player.velocity.y, -player.MAX_SPEED, player.MAX_SPEED)	# Make sure we are in our limits
+	player.velocity.x = clamp(player.velocity.x, -player.MAX_SPEED, player.MAX_SPEED)
+
+	
 	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)
 	
 	if Input.is_action_just_released("grapple"):
 		grppl.release()
 		state_machine.transition_to("Idle")
 	elif Input.is_action_just_pressed("attack"):
+		grppl.release()
 		state_machine.transition_to("Attack")
+	elif Input.is_action_just_pressed("dodge"):
+		grppl.release()
+		state_machine.transition_to("Dodge")
+		#if we want to use a different animation, rememver to use the {air_dodge = true} as second argument in state.machine.transition_to()

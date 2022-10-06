@@ -5,8 +5,7 @@
 [ext_resource path="res://Player/GrappleHook.gd" type="Script" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 7.0
-height = 0.0
+radius = 6.0
 
 [node name="GrappleHook" type="Node2D"]
 position = Vector2( 0, 1 )
@@ -31,5 +30,5 @@ texture = ExtResource( 2 )
 offset = Vector2( 0, 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tip"]
-position = Vector2( 0, 10 )
+position = Vector2( 0, 20 )
 shape = SubResource( 1 )

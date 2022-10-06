@@ -11,14 +11,17 @@ var air_friction = 10
 var slide_speed = 500
 var dodge_speed = 400
 
-const CHAIN_PULL = 60
+var MAX_SPEED = 2000
+
+const CHAIN_PULL = 50
 var chain_velocity:= Vector2.ZERO
 
 var velocity := Vector2.ZERO
 var jumps_made = 0
 
 onready var ground_ray = get_node("ground_check_ray")
-
+onready var ground_ray2 = get_node("ground_check_ray2")
+onready var ground_ray3 = get_node("ground_check_ray3")
 
 func get_input_direction() -> float:
 	
@@ -36,7 +39,9 @@ func get_input_direction() -> float:
 	return direction 
 	
 func on_floor() -> bool:
-	if ground_ray.is_colliding():
+	if (ground_ray.is_colliding() or 
+		ground_ray2.is_colliding() or
+		ground_ray3.is_colliding()):
 		return true
 	else:
 		return false

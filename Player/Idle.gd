@@ -31,7 +31,7 @@ func physics_update(delta: float) -> void:
 	elif not is_zero_approx(player.get_input_direction()):
 		state_machine.transition_to("Run")
 	elif Input.is_action_just_pressed("grapple"):
-		# We clicked the mouse -> shoot
+		
 		grppl.shoot(player.get_local_mouse_position())
 		state_machine.transition_to("Hook")
 		

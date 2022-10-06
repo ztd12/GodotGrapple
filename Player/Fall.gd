@@ -23,7 +23,7 @@ func physics_update(delta: float) -> void:
 	player.velocity.y += player.gravity * delta
 	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)
 	
-	if player.velocity.y < 0:
+	if (player.velocity.y) < 0 or (not is_zero_approx(player.get_input_direction())):
 		animated_sprite.play("crnr_jmp")
 	
 	if (player.jumps_made < player.maximum_jumps) and Input.is_action_just_pressed("jump"):

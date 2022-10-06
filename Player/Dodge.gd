@@ -37,3 +37,4 @@ func physics_update(delta: float) -> void:
 	#TODO add iframes
 	#TODO fix hitbox
 	#dodge is slower than slide, but makes gives you iframes
+	#TODO add air dodge state, so that you can dodge while using grapple hook or in the air jumping/falling.
