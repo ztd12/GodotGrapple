@@ -4,6 +4,9 @@ extends PlayerState
 export(NodePath) var _animation
 onready var animated_sprite: AnimatedSprite = get_node(_animation)
 
+export(NodePath) var _hk
+onready var grppl: Node2D = get_node(_hk)
+
 func enter(_msg := {}) -> void:
 	player.jumps_made += 1
 	player.velocity.y = -player.jump_impulse
@@ -32,6 +35,11 @@ func physics_update(delta: float) -> void:
 		
 	if Input.is_action_just_pressed("attack"):
 		state_machine.transition_to("Attack")	
+	
+	if Input.is_action_just_pressed("grapple"):
+		# We clicked the mouse -> shoot
+		grppl.shoot(player.get_local_mouse_position())
+		state_machine.transition_to("Hook")
 	
 	if player.is_on_floor(): #ALWAYS USE is_on_floor() RIGHT AFTER move_and_slide()
 		if is_zero_approx(player.get_input_direction()):

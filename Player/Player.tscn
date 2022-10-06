@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=88 format=2]
 
 [ext_resource path="res://Player/Individual Sprites/adventurer-attack2-03.png" type="Texture" id=1]
 [ext_resource path="res://Player/Individual Sprites/adventurer-hurt-02.png" type="Texture" id=2]
@@ -83,7 +83,8 @@
 [ext_resource path="res://Player/Individual Sprites/adventurer-stand-00.png" type="Texture" id=81]
 [ext_resource path="res://Player/Attack.gd" type="Script" id=82]
 [ext_resource path="res://Player/Swordsound (1).mp3" type="AudioStream" id=83]
-[ext_resource path="res://Player/Grapple.gd" type="Script" id=84]
+[ext_resource path="res://Player/GrappleHook.tscn" type="PackedScene" id=84]
+[ext_resource path="res://Player/Hook.gd" type="Script" id=85]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 10, 22 )
@@ -177,6 +178,7 @@ animations = [ {
 } ]
 
 [node name="Player" type="KinematicBody2D"]
+collision_layer = 2
 script = ExtResource( 26 )
 __meta__ = {
 "_edit_group_": true
@@ -197,21 +199,31 @@ playing = true
 enabled = true
 cast_to = Vector2( 0, 28 )
 
+[node name="GrappleHook" parent="." instance=ExtResource( 84 )]
+
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 47 )
 initial_state = NodePath("Fall")
 
+[node name="Hook" type="Node" parent="StateMachine"]
+script = ExtResource( 85 )
+_animation = NodePath("../../AnimatedSprite")
+_hk = NodePath("../../GrappleHook")
+
 [node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource( 48 )
 _animation = NodePath("../../AnimatedSprite")
+_hk = NodePath("../../GrappleHook")
 
 [node name="Run" type="Node" parent="StateMachine"]
 script = ExtResource( 49 )
 _animation = NodePath("../../AnimatedSprite")
+_hk = NodePath("../../GrappleHook")
 
 [node name="Jump" type="Node" parent="StateMachine"]
 script = ExtResource( 78 )
 _animation = NodePath("../../AnimatedSprite")
+_hk = NodePath("../../GrappleHook")
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="StateMachine/Jump"]
 stream = ExtResource( 50 )
@@ -220,6 +232,7 @@ volume_db = 3.093
 [node name="Fall" type="Node" parent="StateMachine"]
 script = ExtResource( 80 )
 _animation = NodePath("../../AnimatedSprite")
+_hk = NodePath("../../GrappleHook")
 
 [node name="Dodge" type="Node" parent="StateMachine"]
 script = ExtResource( 77 )
@@ -228,6 +241,7 @@ _animation = NodePath("../../AnimatedSprite")
 [node name="Slide" type="Node" parent="StateMachine"]
 script = ExtResource( 79 )
 _animation = NodePath("../../AnimatedSprite")
+_hk = NodePath("../../GrappleHook")
 
 [node name="Attack" type="Node" parent="StateMachine"]
 script = ExtResource( 82 )
@@ -237,10 +251,6 @@ timer = NodePath("../../AttackTimer")
 [node name="SwordSwing" type="AudioStreamPlayer" parent="StateMachine/Attack"]
 stream = ExtResource( 83 )
 volume_db = -20.105
-
-[node name="Grapple" type="Node" parent="StateMachine"]
-script = ExtResource( 84 )
-_animation = NodePath("../../AnimatedSprite")
 
 [node name="AttackTimer" type="Timer" parent="."]
 process_mode = 0

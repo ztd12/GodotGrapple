@@ -4,6 +4,9 @@ extends PlayerState
 export(NodePath) var _animation
 onready var animated_sprite: AnimatedSprite = get_node(_animation)
 
+export(NodePath) var _hk
+onready var grppl: Node2D = get_node(_hk)
+
 func enter(_msg := {}) -> void:
 	animated_sprite.play("idle")
 	player.jumps_made = 0
@@ -27,7 +30,11 @@ func physics_update(delta: float) -> void:
 		state_machine.transition_to("Dodge")
 	elif not is_zero_approx(player.get_input_direction()):
 		state_machine.transition_to("Run")
-	
+	elif Input.is_action_just_pressed("grapple"):
+		# We clicked the mouse -> shoot
+		grppl.shoot(player.get_local_mouse_position())
+		state_machine.transition_to("Hook")
+		
 	#if you want to use different idle animations depending on the state you can send a bool, line 
 	#it was done before with air state: {prev_state = "Run"}
 	
