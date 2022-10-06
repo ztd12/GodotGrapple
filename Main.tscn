@@ -7,5 +7,6 @@
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 197, 234 )
+z_index = 1
 
 [node name="ForestLevel" parent="." instance=ExtResource( 1 )]

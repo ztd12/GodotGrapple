@@ -1,11 +1,9 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://ForestLevel/Scripts/Background 1.gd" type="Script" id=2]
 [ext_resource path="res://ForestLevel/art/IEROD1905416-military-1905416-320.mp3" type="AudioStream" id=3]
 [ext_resource path="res://ForestLevel/art/bg1.png" type="Texture" id=4]
-[ext_resource path="res://ForestLevel/Scripts/Background 2.gd" type="Script" id=5]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 143.5, 13.25 )
@@ -97,7 +95,7 @@ position = Vector2( 1344, 19 )
 scale = Vector2( 0.7, 0.71 )
 texture = ExtResource( 4 )
 centered = false
-script = ExtResource( 5 )
+script = ExtResource( 2 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Background 2"]
 position = Vector2( -1920, -26.7606 )
@@ -156,7 +154,7 @@ position = Vector2( 2688, 19 )
 scale = Vector2( 0.7, 0.71 )
 texture = ExtResource( 4 )
 centered = false
-script = ExtResource( 5 )
+script = ExtResource( 2 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Background 3"]
 position = Vector2( -1920, -26.7606 )
@@ -213,6 +211,3 @@ shape = SubResource( 8 )
 [node name="Background music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 autoplay = true
-
-[node name="Player" parent="." instance=ExtResource( 6 )]
-position = Vector2( 162, 444 )
