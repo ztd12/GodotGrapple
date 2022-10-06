@@ -3,6 +3,9 @@ extends PlayerState
 export(NodePath) var _animation
 onready var animated_sprite: AnimatedSprite = get_node(_animation)
 
+export(NodePath) var _hk
+onready var grppl: Node2D = get_node(_hk)
+
 func enter(_msg := {}) -> void:
 	animated_sprite.play("slide")
 	

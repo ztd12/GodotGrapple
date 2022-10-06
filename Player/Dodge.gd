@@ -4,6 +4,8 @@ extends PlayerState
 export(NodePath) var _animation
 onready var animated_sprite: AnimatedSprite = get_node(_animation)
 
+
+
 func enter(_msg := {}) -> void:
 	animated_sprite.play("dodge")
 	
@@ -35,3 +37,4 @@ func physics_update(delta: float) -> void:
 	#TODO add iframes
 	#TODO fix hitbox
 	#dodge is slower than slide, but makes gives you iframes
+	#TODO add air dodge state, so that you can dodge while using grapple hook or in the air jumping/falling.
