@@ -1,10 +1,12 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
+[ext_resource path="res://HUD/pause button.png" type="Texture" id=1]
 [ext_resource path="res://ForestLevel/Scripts/Background 1.gd" type="Script" id=2]
 [ext_resource path="res://ForestLevel/art/IEROD1905416-military-1905416-320.mp3" type="AudioStream" id=3]
 [ext_resource path="res://ForestLevel/art/bg1.png" type="Texture" id=4]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ForestLevel/art/forestlevelplatform.png" type="Texture" id=6]
+[ext_resource path="res://ForestLevel/Scenes/ForestLevel.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 143.5, 19.1249 )
@@ -31,6 +33,15 @@ extents = Vector2( 186.5, 22.9998 )
 extents = Vector2( 68.9982, 21.2499 )
 
 [node name="ForestLevel" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="PauseButton" type="TextureButton" parent="."]
+margin_left = 923.0
+margin_top = 5.0
+margin_right = 1823.0
+margin_bottom = 905.0
+rect_scale = Vector2( 0.1, 0.1 )
+texture_normal = ExtResource( 1 )
 
 [node name="Background 1" type="Sprite" parent="."]
 position = Vector2( 0, 19 )
@@ -416,3 +427,27 @@ autoplay = true
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 116, 84 )
+
+[node name="Pause Menu" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Pause_Popup" type="Popup" parent="Pause Menu"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Mute" type="Button" parent="Pause Menu/Pause_Popup"]
+margin_right = 12.0
+margin_bottom = 20.0
+
+[node name="Resume" type="Button" parent="Pause Menu/Pause_Popup"]
+margin_right = 12.0
+margin_bottom = 20.0
+
+[node name="Quit" type="Button" parent="Pause Menu/Pause_Popup"]
+margin_right = 12.0
+margin_bottom = 20.0
+
+[connection signal="pressed" from="PauseButton" to="." method="_on_PauseButton_pressed"]
+[connection signal="pressed" from="PauseButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Pause Menu/Pause_Popup/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="Pause Menu/Pause_Popup/Quit" to="." method="_on_Quit_pressed"]
