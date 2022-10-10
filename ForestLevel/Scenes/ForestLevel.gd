@@ -5,8 +5,7 @@ onready var _pause = get_node(_pause_menu)
 
 func _on_PauseButton_pressed():
 	get_tree().paused = true
-	_pause.get_child(0).popup()
-	_pause.show()
+	_pause.popup()
 
 
 func _on_Quit_pressed():
