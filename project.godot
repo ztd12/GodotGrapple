@@ -39,7 +39,7 @@ _global_script_class_icons={
 [application]
 
 config/name="GRAPPLE"
-run/main_scene="res://Main.tscn"
+run/main_scene="res://HUD/Main Menu.tscn"
 config/icon="res://icon.png"
 
 [gui]
