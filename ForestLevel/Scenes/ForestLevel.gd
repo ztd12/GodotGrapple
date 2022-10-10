@@ -16,3 +16,9 @@ func _on_Resume_pressed():
 	_pause.hide()
 	get_tree().paused = false
 	
+
+
+func _on_Mute_pressed():
+	var master_sound = AudioServer.get_bus_index("Master")
+	AudioServer.set_bus_mute(master_sound,
+							not AudioServer.is_bus_mute(master_sound))
