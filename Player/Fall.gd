@@ -7,6 +7,7 @@ onready var animated_sprite: AnimatedSprite = get_node(_animation)
 export(NodePath) var _hk
 onready var grppl: Node2D = get_node(_hk)
 
+
 func enter(_msg := {}) -> void:
 	animated_sprite.play("fall")
 	
@@ -44,6 +45,9 @@ func physics_update(delta: float) -> void:
 			state_machine.transition_to("Run")
 			
 	if player.position.y > 750:
-			get_tree().change_scene("res://HUD/Level Menu.tscn")
+		state_machine.transition_to("Dead")
+		
 		
 
+
+		
