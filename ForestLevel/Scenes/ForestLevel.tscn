@@ -399,6 +399,7 @@ position = Vector2( 2597.25, 367.25 )
 shape = SubResource( 8 )
 
 [node name="Background music" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 3 )
 autoplay = true
 
@@ -440,4 +441,5 @@ text = "Quit"
 
 [connection signal="pressed" from="PauseButton" to="." method="_on_PauseButton_pressed"]
 [connection signal="pressed" from="Pause_Menu/Pause Menu/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="Pause_Menu/Pause Menu/Mute" to="." method="_on_Mute_pressed"]
 [connection signal="pressed" from="Pause_Menu/Pause Menu/Quit" to="." method="_on_Quit_pressed"]
