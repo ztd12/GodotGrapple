@@ -42,5 +42,8 @@ func physics_update(delta: float) -> void:
 			state_machine.transition_to("Idle")
 		else:
 			state_machine.transition_to("Run")
+			
+	if player.position.y > 750:
+			get_tree().change_scene("res://HUD/Level Menu.tscn")
 		
 
