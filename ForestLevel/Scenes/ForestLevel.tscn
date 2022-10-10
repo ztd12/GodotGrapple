@@ -1,33 +1,34 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://ForestLevel/Scripts/Background 1.gd" type="Script" id=2]
 [ext_resource path="res://ForestLevel/art/IEROD1905416-military-1905416-320.mp3" type="AudioStream" id=3]
 [ext_resource path="res://ForestLevel/art/bg1.png" type="Texture" id=4]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ForestLevel/art/forestlevelplatform.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 143.5, 13.25 )
+extents = Vector2( 143.5, 19.1249 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 99, 13.5 )
+extents = Vector2( 99, 17.4998 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 126.75, 10 )
+extents = Vector2( 126.75, 19.5 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 128.875, 11.5 )
+extents = Vector2( 128.875, 19.25 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 133.5, 10.5 )
+extents = Vector2( 133.5, 20.9999 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 113.5, 11.5 )
+extents = Vector2( 113.5, 20.9998 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 186.5, 13 )
+extents = Vector2( 186.5, 22.9998 )
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 70.75, 10 )
+extents = Vector2( 68.9982, 21.2499 )
 
 [node name="ForestLevel" type="Node2D"]
 
@@ -44,11 +45,12 @@ scale = Vector2( 1.42857, 1.40845 )
 
 [node name="Sprite" type="Sprite" parent="Background 1/StaticBody2D4"]
 position = Vector2( 206, 504 )
-scale = Vector2( 4.54687, 0.4375 )
-texture = ExtResource( 1 )
+scale = Vector2( 1, 0.7 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 1/StaticBody2D4"]
-position = Vector2( 206.5, 502 )
+position = Vector2( 206.5, 496.125 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="Background 1"]
@@ -56,12 +58,13 @@ position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
 [node name="Sprite" type="Sprite" parent="Background 1/StaticBody2D5"]
-position = Vector2( 571, 435 )
-scale = Vector2( 3.13281, 0.4375 )
-texture = ExtResource( 1 )
+position = Vector2( 568.501, 435 )
+scale = Vector2( 0.704862, 0.7 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 1/StaticBody2D5"]
-position = Vector2( 571, 433.5 )
+position = Vector2( 569, 429.5 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="Background 1"]
@@ -69,12 +72,13 @@ position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
 [node name="Sprite" type="Sprite" parent="Background 1/StaticBody2D6"]
-position = Vector2( 877.5, 334 )
-scale = Vector2( 4.14063, 0.4375 )
-texture = ExtResource( 1 )
+position = Vector2( 878.501, 334 )
+scale = Vector2( 0.871529, 0.7 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 1/StaticBody2D6"]
-position = Vector2( 878.25, 334 )
+position = Vector2( 878.25, 329.5 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 4 )
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="Background 1"]
@@ -82,12 +86,13 @@ position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
 [node name="Sprite" type="Sprite" parent="Background 1/StaticBody2D7"]
-position = Vector2( 1186.25, 534 )
-scale = Vector2( 3.99219, 0.4375 )
-texture = ExtResource( 1 )
+position = Vector2( 1189, 534 )
+scale = Vector2( 0.881945, 0.7 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 1/StaticBody2D7"]
-position = Vector2( 1187.13, 537 )
+position = Vector2( 1187, 528.75 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 5 )
 
 [node name="Background 2" type="Sprite" parent="."]
@@ -102,12 +107,13 @@ position = Vector2( -1920, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
 [node name="Sprite" type="Sprite" parent="Background 2/StaticBody2D3"]
-position = Vector2( 1579, 430 )
-scale = Vector2( 4.15625, 0.4375 )
-texture = ExtResource( 1 )
+position = Vector2( 1580, 430 )
+scale = Vector2( 0.944445, 0.7 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 2/StaticBody2D3"]
-position = Vector2( 1577.5, 431.5 )
+position = Vector2( 1577.5, 427 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="Background 2"]
@@ -115,12 +121,13 @@ position = Vector2( -1920, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
 [node name="Sprite" type="Sprite" parent="Background 2/StaticBody2D8"]
-position = Vector2( 1900.13, 562 )
-scale = Vector2( 3.52734, 0.4375 )
-texture = ExtResource( 1 )
+position = Vector2( 1903, 562 )
+scale = Vector2( 0.791667, 0.7 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 2/StaticBody2D8"]
-position = Vector2( 1899.5, 560.5 )
+position = Vector2( 1899.5, 556.5 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 6 )
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="Background 2"]
@@ -128,12 +135,13 @@ position = Vector2( -1920, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
 [node name="Sprite" type="Sprite" parent="Background 2/StaticBody2D9"]
-position = Vector2( 2276.56, 470 )
-scale = Vector2( 5.98242, 0.4375 )
-texture = ExtResource( 1 )
+position = Vector2( 2273.5, 470 )
+scale = Vector2( 1.29514, 0.7 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 2/StaticBody2D9"]
-position = Vector2( 2273.5, 470 )
+position = Vector2( 2273.5, 464 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 7 )
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="Background 2"]
@@ -141,12 +149,76 @@ position = Vector2( -1920, -25.3521 )
 scale = Vector2( 1.42857, 1.40845 )
 
 [node name="Sprite" type="Sprite" parent="Background 2/StaticBody2D10"]
-position = Vector2( 2597, 370 )
-scale = Vector2( 2.41309, 0.4375 )
-texture = ExtResource( 1 )
+position = Vector2( 2602.5, 370 )
+scale = Vector2( 0.475694, 0.7 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 2/StaticBody2D10"]
-position = Vector2( 2597.25, 369 )
+position = Vector2( 2599, 366.5 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 8 )
+
+[node name="Background 5" type="Sprite" parent="."]
+position = Vector2( 5375, 19 )
+scale = Vector2( 0.7, 0.71 )
+texture = ExtResource( 4 )
+centered = false
+script = ExtResource( 2 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Background 5"]
+position = Vector2( -1920, -26.7606 )
+scale = Vector2( 1.42857, 1.40845 )
+
+[node name="Sprite" type="Sprite" parent="Background 5/StaticBody2D3"]
+position = Vector2( 1580, 430 )
+scale = Vector2( 0.944445, 0.7 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background 5/StaticBody2D3"]
+position = Vector2( 1577.5, 427 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Background 5"]
+position = Vector2( -1920, -26.7606 )
+scale = Vector2( 1.42857, 1.40845 )
+
+[node name="Sprite" type="Sprite" parent="Background 5/StaticBody2D8"]
+position = Vector2( 1903, 562 )
+scale = Vector2( 0.791667, 0.7 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background 5/StaticBody2D8"]
+position = Vector2( 1899.5, 556.5 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 6 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Background 5"]
+position = Vector2( -1920, -26.7606 )
+scale = Vector2( 1.42857, 1.40845 )
+
+[node name="Sprite" type="Sprite" parent="Background 5/StaticBody2D9"]
+position = Vector2( 2273.5, 470 )
+scale = Vector2( 1.29514, 0.7 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background 5/StaticBody2D9"]
+position = Vector2( 2273.5, 464 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 7 )
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="Background 5"]
+position = Vector2( -1920, -25.3521 )
+scale = Vector2( 1.42857, 1.40845 )
+
+[node name="Sprite" type="Sprite" parent="Background 5/StaticBody2D10"]
+position = Vector2( 2602.5, 370 )
+scale = Vector2( 0.475694, 0.7 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background 5/StaticBody2D10"]
+position = Vector2( 2599, 366.5 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 8 )
 
 [node name="Background 3" type="Sprite" parent="."]
@@ -161,12 +233,13 @@ position = Vector2( -1920, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
 [node name="Sprite" type="Sprite" parent="Background 3/StaticBody2D3"]
-position = Vector2( 1594, 120 )
-scale = Vector2( 4.15625, 0.4375 )
-texture = ExtResource( 1 )
+position = Vector2( 1603, 120 )
+scale = Vector2( 0.937501, 0.7 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 3/StaticBody2D3"]
-position = Vector2( 1601, 118 )
+position = Vector2( 1601, 117 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="Background 3"]
@@ -174,12 +247,13 @@ position = Vector2( -1920, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
 [node name="Sprite" type="Sprite" parent="Background 3/StaticBody2D8"]
-position = Vector2( 1900.13, 562 )
-scale = Vector2( 3.52734, 0.4375 )
-texture = ExtResource( 1 )
+position = Vector2( 1897, 562 )
+scale = Vector2( 0.798612, 0.7 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 3/StaticBody2D8"]
-position = Vector2( 1899.5, 560.5 )
+position = Vector2( 1899.5, 557 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 6 )
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="Background 3"]
@@ -187,12 +261,13 @@ position = Vector2( -1920, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
 [node name="Sprite" type="Sprite" parent="Background 3/StaticBody2D9"]
-position = Vector2( 2276.56, 470 )
-scale = Vector2( 5.98242, 0.4375 )
-texture = ExtResource( 1 )
+position = Vector2( 2273.5, 470 )
+scale = Vector2( 1.28125, 0.7 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 3/StaticBody2D9"]
-position = Vector2( 2273.5, 470 )
+position = Vector2( 2273.5, 466 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 7 )
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="Background 3"]
@@ -200,14 +275,144 @@ position = Vector2( -1920, -25.3521 )
 scale = Vector2( 1.42857, 1.40845 )
 
 [node name="Sprite" type="Sprite" parent="Background 3/StaticBody2D10"]
-position = Vector2( 2597, 370 )
-scale = Vector2( 2.41309, 0.4375 )
-texture = ExtResource( 1 )
+position = Vector2( 2598.5, 370 )
+scale = Vector2( 0.489583, 0.7 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 3/StaticBody2D10"]
-position = Vector2( 2597.25, 369 )
+position = Vector2( 2597.25, 367.25 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 8 )
+
+[node name="Background 6" type="Sprite" parent="."]
+position = Vector2( 6720, 19 )
+scale = Vector2( 0.7, 0.71 )
+texture = ExtResource( 4 )
+centered = false
+script = ExtResource( 2 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Background 6"]
+position = Vector2( -2000, 150 )
+scale = Vector2( 1.42857, 1.40845 )
+
+[node name="Sprite" type="Sprite" parent="Background 6/StaticBody2D3"]
+position = Vector2( 1603, 120 )
+scale = Vector2( 0.937501, 0.7 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background 6/StaticBody2D3"]
+position = Vector2( 1601, 117 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Background 6"]
+position = Vector2( -1920, -600 )
+scale = Vector2( 1.42857, 1.40845 )
+
+[node name="Sprite" type="Sprite" parent="Background 6/StaticBody2D8"]
+position = Vector2( 1897, 562 )
+scale = Vector2( 0.798612, 0.7 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background 6/StaticBody2D8"]
+position = Vector2( 1899.5, 557 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 6 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Background 6"]
+position = Vector2( -1920, -26.7606 )
+scale = Vector2( 1.42857, 1.40845 )
+
+[node name="Sprite" type="Sprite" parent="Background 6/StaticBody2D9"]
+position = Vector2( 2273.5, 470 )
+scale = Vector2( 1.28125, 0.7 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background 6/StaticBody2D9"]
+position = Vector2( 2273.5, 466 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 7 )
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="Background 6"]
+position = Vector2( -1920, -25.3521 )
+scale = Vector2( 1.42857, 1.40845 )
+
+[node name="Sprite" type="Sprite" parent="Background 6/StaticBody2D10"]
+position = Vector2( 2598.5, 370 )
+scale = Vector2( 0.489583, 0.7 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background 6/StaticBody2D10"]
+position = Vector2( 2597.25, 367.25 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 8 )
+
+[node name="Background 4" type="Sprite" parent="."]
+position = Vector2( 4032, 19 )
+scale = Vector2( 0.7, 0.71 )
+texture = ExtResource( 4 )
+centered = false
+script = ExtResource( 2 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Background 4"]
+position = Vector2( -1920, 200 )
+scale = Vector2( 1.42857, 1.40845 )
+
+[node name="Sprite" type="Sprite" parent="Background 4/StaticBody2D3"]
+position = Vector2( 1603, 120 )
+scale = Vector2( 0.937501, 0.7 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background 4/StaticBody2D3"]
+position = Vector2( 1601, 117 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Background 4"]
+position = Vector2( -1920, -600 )
+scale = Vector2( 1.42857, 1.40845 )
+
+[node name="Sprite" type="Sprite" parent="Background 4/StaticBody2D8"]
+position = Vector2( 1897, 562 )
+scale = Vector2( 0.798612, 0.7 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background 4/StaticBody2D8"]
+position = Vector2( 1899.5, 557 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 6 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Background 4"]
+position = Vector2( -2000, -100 )
+scale = Vector2( 1.42857, 1.40845 )
+
+[node name="Sprite" type="Sprite" parent="Background 4/StaticBody2D9"]
+position = Vector2( 2273.5, 470 )
+scale = Vector2( 1.28125, 0.7 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background 4/StaticBody2D9"]
+position = Vector2( 2273.5, 466 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 7 )
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="Background 4"]
+position = Vector2( -1920, 250 )
+scale = Vector2( 1.42857, 1.40845 )
+
+[node name="Sprite" type="Sprite" parent="Background 4/StaticBody2D10"]
+position = Vector2( 2598.5, 370 )
+scale = Vector2( 0.489583, 0.7 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background 4/StaticBody2D10"]
+position = Vector2( 2597.25, 367.25 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 8 )
 
 [node name="Background music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 autoplay = true
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 116, 84 )
