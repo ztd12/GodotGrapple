@@ -34,6 +34,7 @@ extents = Vector2( 68.9982, 21.2499 )
 
 [node name="ForestLevel" type="Node2D"]
 script = ExtResource( 7 )
+_pause_menu = NodePath("Pause Menu")
 
 [node name="PauseButton" type="TextureButton" parent="."]
 margin_left = 923.0
@@ -61,7 +62,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 1/StaticBody2D4"]
 position = Vector2( 206.5, 496.125 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="Background 1"]
@@ -75,7 +75,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 1/StaticBody2D5"]
 position = Vector2( 569, 429.5 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="Background 1"]
@@ -89,7 +88,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 1/StaticBody2D6"]
 position = Vector2( 878.25, 329.5 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 4 )
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="Background 1"]
@@ -103,7 +101,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 1/StaticBody2D7"]
 position = Vector2( 1187, 528.75 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 5 )
 
 [node name="Background 2" type="Sprite" parent="."]
@@ -124,7 +121,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 2/StaticBody2D3"]
 position = Vector2( 1577.5, 427 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="Background 2"]
@@ -138,7 +134,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 2/StaticBody2D8"]
 position = Vector2( 1899.5, 556.5 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 6 )
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="Background 2"]
@@ -152,7 +147,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 2/StaticBody2D9"]
 position = Vector2( 2273.5, 464 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 7 )
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="Background 2"]
@@ -166,7 +160,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 2/StaticBody2D10"]
 position = Vector2( 2599, 366.5 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 8 )
 
 [node name="Background 5" type="Sprite" parent="."]
@@ -187,7 +180,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 5/StaticBody2D3"]
 position = Vector2( 1577.5, 427 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="Background 5"]
@@ -201,7 +193,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 5/StaticBody2D8"]
 position = Vector2( 1899.5, 556.5 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 6 )
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="Background 5"]
@@ -215,7 +206,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 5/StaticBody2D9"]
 position = Vector2( 2273.5, 464 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 7 )
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="Background 5"]
@@ -229,7 +219,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 5/StaticBody2D10"]
 position = Vector2( 2599, 366.5 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 8 )
 
 [node name="Background 3" type="Sprite" parent="."]
@@ -250,7 +239,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 3/StaticBody2D3"]
 position = Vector2( 1601, 117 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="Background 3"]
@@ -264,7 +252,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 3/StaticBody2D8"]
 position = Vector2( 1899.5, 557 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 6 )
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="Background 3"]
@@ -278,7 +265,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 3/StaticBody2D9"]
 position = Vector2( 2273.5, 466 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 7 )
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="Background 3"]
@@ -292,7 +278,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 3/StaticBody2D10"]
 position = Vector2( 2597.25, 367.25 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 8 )
 
 [node name="Background 6" type="Sprite" parent="."]
@@ -313,7 +298,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 6/StaticBody2D3"]
 position = Vector2( 1601, 117 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="Background 6"]
@@ -327,7 +311,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 6/StaticBody2D8"]
 position = Vector2( 1899.5, 557 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 6 )
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="Background 6"]
@@ -341,7 +324,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 6/StaticBody2D9"]
 position = Vector2( 2273.5, 466 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 7 )
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="Background 6"]
@@ -355,7 +337,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 6/StaticBody2D10"]
 position = Vector2( 2597.25, 367.25 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 8 )
 
 [node name="Background 4" type="Sprite" parent="."]
@@ -376,7 +357,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 4/StaticBody2D3"]
 position = Vector2( 1601, 117 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="Background 4"]
@@ -390,7 +370,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 4/StaticBody2D8"]
 position = Vector2( 1899.5, 557 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 6 )
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="Background 4"]
@@ -404,7 +383,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 4/StaticBody2D9"]
 position = Vector2( 2273.5, 466 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 7 )
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="Background 4"]
@@ -418,7 +396,6 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 4/StaticBody2D10"]
 position = Vector2( 2597.25, 367.25 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 8 )
 
 [node name="Background music" type="AudioStreamPlayer" parent="."]
@@ -432,20 +409,33 @@ position = Vector2( 116, 84 )
 layer = 2
 
 [node name="Pause_Popup" type="Popup" parent="Pause Menu"]
-margin_right = 40.0
-margin_bottom = 40.0
+pause_mode = 2
+visible = true
+margin_right = 1026.0
+margin_bottom = 597.0
 
 [node name="Mute" type="Button" parent="Pause Menu/Pause_Popup"]
-margin_right = 12.0
-margin_bottom = 20.0
+margin_left = 496.0
+margin_top = 493.0
+margin_right = 541.0
+margin_bottom = 513.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Mute"
 
 [node name="Resume" type="Button" parent="Pause Menu/Pause_Popup"]
-margin_right = 12.0
-margin_bottom = 20.0
+margin_left = 480.0
+margin_top = 184.0
+margin_right = 544.0
+margin_bottom = 204.0
+text = "Resume"
 
 [node name="Quit" type="Button" parent="Pause Menu/Pause_Popup"]
-margin_right = 12.0
-margin_bottom = 20.0
+margin_left = 496.0
+margin_top = 344.0
+margin_right = 536.0
+margin_bottom = 364.0
+text = "Quit"
 
 [connection signal="pressed" from="PauseButton" to="." method="_on_PauseButton_pressed"]
 [connection signal="pressed" from="PauseButton" to="." method="_on_TextureButton_pressed"]
