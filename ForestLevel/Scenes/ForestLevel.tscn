@@ -405,8 +405,9 @@ autoplay = true
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 116, 84 )
 
-[node name="Pause Menu" type="CanvasLayer" parent="."]
-layer = 2
+[node name="Pause_Menu" type="CanvasLayer" parent="."]
+pause_mode = 2
+layer = 3
 
 [node name="Pause_Popup" type="Popup" parent="Pause Menu"]
 pause_mode = 2
@@ -439,5 +440,6 @@ text = "Quit"
 
 [connection signal="pressed" from="PauseButton" to="." method="_on_PauseButton_pressed"]
 [connection signal="pressed" from="PauseButton" to="." method="_on_TextureButton_pressed"]
-[connection signal="pressed" from="Pause Menu/Pause_Popup/Resume" to="." method="_on_Resume_pressed"]
-[connection signal="pressed" from="Pause Menu/Pause_Popup/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="Pause_Menu/Pause_Popup/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="Pause_Menu/Pause_Popup/Restart" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="Pause_Menu/Pause_Popup/Quit" to="." method="_on_Quit_pressed"]
