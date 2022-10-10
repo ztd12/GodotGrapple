@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://HUD/how_to_menu.gd" type="Script" id=1]
+
+[node name="How To Menu" type="Control"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.25098, 0.368627, 0.203922, 1 )
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 348.0
+margin_top = 35.0
+margin_right = 425.0
+margin_bottom = 49.0
+rect_scale = Vector2( 4, 4 )
+text = "How To Play"
+
+[node name="Label3" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 27.0
+margin_top = 102.0
+margin_right = 104.0
+margin_bottom = 116.0
+rect_scale = Vector2( 3, 3 )
+text = "Controls"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 37.0
+margin_top = 174.0
+margin_right = 172.0
+margin_bottom = 324.0
+rect_scale = Vector2( 2, 2 )
+text = "Move Left: A
+Move Right: D
+Jump: W
+Slide: (A or D) + S
+Attack: Space
+Dodge: Shift 
+Grapple: Mouse Click"
+
+[node name="homeButton" type="Button" parent="."]
+margin_left = 417.0
+margin_top = 509.0
+margin_right = 519.0
+margin_bottom = 529.0
+rect_scale = Vector2( 2, 2 )
+text = "Back to Home"
+
+[connection signal="pressed" from="homeButton" to="." method="_on_homeButton_pressed"]

@@ -20,3 +20,7 @@ func _on_StartButton_pressed():
 	get_tree().change_scene("res://HUD/Level Menu.tscn")
 
 
+
+
+func _on_HowToButton_pressed():
+	get_tree().change_scene("res://HUD/How To Menu.tscn")
