@@ -1,16 +1,25 @@
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+export (NodePath) var _pause_menu
+onready var _pause = get_node(_pause_menu)
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func _on_PauseButton_pressed():
+	get_tree().paused = true
+	_pause.popup()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_Resume_pressed():
+	_pause.hide()
+	get_tree().paused = false
+
+
+func _on_Mute_pressed():
+	var master_sound = AudioServer.get_bus_index("Master")
+	AudioServer.set_bus_mute(master_sound,
+							not AudioServer.is_bus_mute(master_sound))
+
+
+func _on_Quit_pressed():
+	get_tree().paused = false
+	get_tree().change_scene("res://HUD/Level Menu.tscn")
