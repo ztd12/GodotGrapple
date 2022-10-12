@@ -41,7 +41,7 @@ Move Right: D
 Jump: W
 Slide: (A or D) + S
 Attack: Space
-Dodge: Shift 
+Dodge: (A or D) + Shift 
 Grapple: Mouse Click"
 
 [node name="homeButton" type="Button" parent="."]
