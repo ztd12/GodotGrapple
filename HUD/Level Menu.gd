@@ -11,3 +11,7 @@ func _on_Level_2_pressed():
 
 func _on_Back_to_Home_pressed():
 	get_tree().change_scene("res://HUD/Main Menu.tscn")
+
+
+func _on_Level_3_pressed():
+	get_tree().change_scene("res://SpaceLevel/SpaceLevel.tscn")

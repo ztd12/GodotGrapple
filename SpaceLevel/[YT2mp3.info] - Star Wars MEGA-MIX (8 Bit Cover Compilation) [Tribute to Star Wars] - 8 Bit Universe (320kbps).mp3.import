@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/[YT2mp3.info] - Star Wars MEGA-MIX (8 Bit Cover Compilation) [Tribute to Star Wars] - 8 Bit Universe (320kbps).mp3-799536a7004938de944ca74c970a7ee1.mp3str"
+
+[deps]
+
+source_file="res://SpaceLevel/[YT2mp3.info] - Star Wars MEGA-MIX (8 Bit Cover Compilation) [Tribute to Star Wars] - 8 Bit Universe (320kbps).mp3"
+dest_files=[ "res://.import/[YT2mp3.info] - Star Wars MEGA-MIX (8 Bit Cover Compilation) [Tribute to Star Wars] - 8 Bit Universe (320kbps).mp3-799536a7004938de944ca74c970a7ee1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

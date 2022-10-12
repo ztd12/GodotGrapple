@@ -50,4 +50,5 @@ text = "Back to Home"
 
 [connection signal="pressed" from="VBoxContainer/Level 1" to="." method="_on_Level_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/Level 2" to="." method="_on_Level_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Level 3" to="." method="_on_Level_3_pressed"]
 [connection signal="pressed" from="Back to Home" to="." method="_on_Back_to_Home_pressed"]
