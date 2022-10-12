@@ -415,6 +415,9 @@ pause_mode = 2
 visible = true
 margin_right = 1026.0
 margin_bottom = 597.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Resume" type="Button" parent="Pause_Menu/Pause Menu"]
 margin_left = 480.0
@@ -422,6 +425,9 @@ margin_top = 184.0
 margin_right = 544.0
 margin_bottom = 204.0
 text = "Resume"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Mute" type="Button" parent="Pause_Menu/Pause Menu"]
 margin_left = 496.0
@@ -431,6 +437,9 @@ margin_bottom = 513.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Mute"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Quit" type="Button" parent="Pause_Menu/Pause Menu"]
 margin_left = 496.0
@@ -438,6 +447,9 @@ margin_top = 344.0
 margin_right = 536.0
 margin_bottom = 364.0
 text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [connection signal="pressed" from="PauseButton" to="." method="_on_PauseButton_pressed"]
 [connection signal="pressed" from="Pause_Menu/Pause Menu/Resume" to="." method="_on_Resume_pressed"]
