@@ -96,17 +96,17 @@ animations = [ {
 "frames": [ ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 65 ), ExtResource( 69 ) ],
 "loop": false,
 "name": "attack1",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [ ExtResource( 20 ), ExtResource( 22 ), ExtResource( 37 ), ExtResource( 1 ), ExtResource( 18 ), ExtResource( 14 ) ],
 "loop": false,
 "name": "attack2",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [ ExtResource( 62 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 61 ) ],
 "loop": false,
 "name": "attack3",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [ ExtResource( 55 ), ExtResource( 56 ), ExtResource( 54 ), ExtResource( 57 ), ExtResource( 58 ) ],
 "loop": true,
@@ -193,7 +193,8 @@ shape = SubResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 1.5, 1.50676 )
 frames = SubResource( 1 )
-animation = "idle"
+animation = "attack1"
+frame = 4
 playing = true
 
 [node name="ground_check_ray" type="RayCast2D" parent="."]
@@ -273,5 +274,13 @@ volume_db = 1.238
 
 [node name="AttackTimer" type="Timer" parent="."]
 process_mode = 0
-wait_time = 0.5
+wait_time = 0.25
 one_shot = true
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+
+[node name="Hurtbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]

@@ -11,6 +11,8 @@ var air_friction = 10
 var slide_speed = 500
 var dodge_speed = 400
 
+var health = 100
+
 var MAX_SPEED = 2000
 
 const CHAIN_PULL = 50
