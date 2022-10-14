@@ -35,15 +35,18 @@ func get_direction() -> float:
 		$Vision.rotation_degrees = 0
 		$RayFloorEdge.position.x = -10
 		$behind.position.y = 9
+		$behind.rotation_degrees = -90
 		
 	if direction > 0: 
 		$AnimatedSprite.flip_h = false
 		$Vision.rotation_degrees = 90
 		$RayFloorEdge.position.x = 9
-		$behind.position.y = -10
+		$behind.position.y = 9
 		$behind.rotation_degrees = 90
 		
 	return direction 
 
 func _ready():
 	pass
+
+#ADD FLOOR DETETCTION, HIT AND HURT BOXES, KNOCKBACK, BEHIND RAYCAST FUNCTION

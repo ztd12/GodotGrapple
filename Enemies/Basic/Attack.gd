@@ -8,6 +8,9 @@ func enter(_msg := {}) -> void:
 	
 func physics_update(delta: float) -> void:
 	
+	if animated_sprite.get_frame() == 7:
+		state_machine.transition_to("Idle")
+	
 	if owner.detected_player == true and owner.distance_to_player > 45:
 		state_machine.transition_to("Run")
 		
