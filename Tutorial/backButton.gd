@@ -2,5 +2,5 @@ extends Button
 
 
 
-func _on_TutorialButton_pressed():
+func _on_backButton_pressed():
 	get_tree().change_scene("res://Tutorial/tutorial1.tscn")
