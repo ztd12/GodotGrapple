@@ -4,6 +4,8 @@ extends PlayerState
 export(NodePath) var _animation
 onready var animated_sprite: AnimatedSprite = get_node(_animation)
 
+export(NodePath) var _hitbox
+onready var hitbox: Area2D = get_node(_hitbox)
 
 export(NodePath) var timer
 onready var attack_timer = get_node(timer)
@@ -15,6 +17,7 @@ var state_position
 
 
 func enter(_msg := {}) -> void:
+	hitbox.monitorable = true
 	if attack_timer.get_time_left() == 0:
 		state_position = 0
 		animated_sprite.play(states[state_position])
@@ -43,11 +46,13 @@ func physics_update(delta: float) -> void:
 	
 	
 	if Input.is_action_just_pressed("jump") and player.is_on_floor():
+		hitbox.monitorable = false
 		state_machine.transition_to("Jump")
 	
-	print(attack_timer.get_time_left())
+	#print(attack_timer.get_time_left())
 	
 	if (att1 or att2 or att3):
+		hitbox.monitorable = false
 		attack_timer.start()
 		state_machine.transition_to("Idle")
 		

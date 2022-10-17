@@ -4,14 +4,17 @@ extends PlayerState
 export(NodePath) var _animation
 onready var animated_sprite: AnimatedSprite = get_node(_animation)
 
-
+export(NodePath) var _hurtbox
+onready var hurtbox: Area2D = get_node(_hurtbox)
 
 func enter(_msg := {}) -> void:
+	hurtbox.monitoring = false
 	animated_sprite.play("dodge")
 	
 func physics_update(delta: float) -> void:
 	
 	if not player.is_on_floor():
+		hurtbox.monitoring = true
 		state_machine.transition_to("Fall")
 		return 
 			
@@ -25,12 +28,16 @@ func physics_update(delta: float) -> void:
 	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)
 	
 	if Input.is_action_just_pressed("jump"):
+		hurtbox.monitoring = true
 		state_machine.transition_to("Jump")
 	elif is_zero_approx(player.get_input_direction()):
+		hurtbox.monitoring = true
 		state_machine.transition_to("Idle")
 	elif animated_sprite.get_frame() == 5:
 		if Input.is_action_just_pressed("move_left") or Input.is_action_just_pressed("move_right"):
+			hurtbox.monitoring = true
 			state_machine.transition_to("Run")
+		hurtbox.monitoring = true
 		state_machine.transition_to("Idle")
 		
 		

@@ -12,7 +12,10 @@ func enter(_msg := {}) -> void:
 	player.jumps_made = 0
 	
 func physics_update(delta: float) -> void:
-	
+	if owner.taking_damage:
+		state_machine.transition_to("Takehit")
+	if owner.dead:
+		state_machine.transition_to("Dead")
 		
 	if not player.on_floor():
 		state_machine.transition_to("Fall")
