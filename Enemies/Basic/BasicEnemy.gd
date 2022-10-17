@@ -55,7 +55,9 @@ func _ready():
 		$behindRay.rotation_degrees = 90
 		hitbox_shape.rotation_degrees = 116.8
 
+func _process(delta):
 
+	self.position.x += -1.5
 
 func set_direction() -> float:
 	
