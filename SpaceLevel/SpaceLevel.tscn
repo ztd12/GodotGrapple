@@ -96,7 +96,6 @@ texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background1/StaticBody2D4"]
 position = Vector2( 110.606, 32.7333 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 4 )
 
 [node name="Background2" type="Sprite" parent="."]
@@ -159,7 +158,6 @@ texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background2/StaticBody2D3"]
 position = Vector2( 43.511, -46 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Background2"]
@@ -171,7 +169,6 @@ texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background2/StaticBody2D4"]
 position = Vector2( 110.606, 32.7333 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 4 )
 
 [node name="Background3" type="Sprite" parent="."]
@@ -234,7 +231,6 @@ texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background3/StaticBody2D3"]
 position = Vector2( 43.511, -46 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Background3"]
@@ -246,7 +242,6 @@ texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background3/StaticBody2D4"]
 position = Vector2( 110.606, 32.7333 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 4 )
 
 [node name="Background4" type="Sprite" parent="."]
@@ -309,7 +304,6 @@ texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background4/StaticBody2D3"]
 position = Vector2( 43.511, -46 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Background4"]
@@ -322,7 +316,6 @@ texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background4/StaticBody2D4"]
 position = Vector2( 110.606, 32.7333 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 4 )
 
 [node name="Background5" type="Sprite" parent="."]
@@ -385,7 +378,6 @@ texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background5/StaticBody2D3"]
 position = Vector2( 43.511, -46 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Background5"]
@@ -398,14 +390,13 @@ texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background5/StaticBody2D4"]
 position = Vector2( 110.606, 32.7333 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 8 )]
 position = Vector2( 106, 110 )
 z_index = 1
 
-[node name="Background Music" type="AudioStreamPlayer2D" parent="."]
+[node name="Background Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
 volume_db = 6.442
 autoplay = true
