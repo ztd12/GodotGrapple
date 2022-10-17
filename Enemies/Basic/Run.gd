@@ -9,11 +9,19 @@ var direction
 func enter(_msg := {}) -> void:
 	animated_sprite.play("run")
 	
+	
 func physics_update(delta: float) -> void:
+	
+	if not owner.on_floor():
+		
+		state_machine.transition_to("Fall")
+	
 	if owner.taking_damage:
+	
 		state_machine.transition_to("Takehit")
 		
 	if owner.dead:
+		
 		state_machine.transition_to("Death")
 
 	if owner.player_position.x < owner.position.x:
@@ -28,6 +36,7 @@ func physics_update(delta: float) -> void:
 	owner.set_direction()
 	
 	if owner.distance_to_player < 45:
+		
 		state_machine.transition_to("Attack")
 	
 	if not owner.detected_player and not owner.player_behind:

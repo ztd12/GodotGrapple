@@ -243,7 +243,10 @@ radius = 16.0
 height = 4.0
 
 [node name="Enemy" type="KinematicBody2D"]
+physics_interpolation_mode = 2
+z_index = 1
 collision_layer = 2
+moving_platform_apply_velocity_on_leave = 2
 script = ExtResource( 11 )
 _hitbox_collision_shape = NodePath("EnemyHitbox/CollisionShape2D")
 
@@ -328,9 +331,19 @@ enabled = true
 cast_to = Vector2( 0, 400 )
 collision_mask = 17
 
-[node name="RayFloorEdge" type="RayCast2D" parent="."]
-position = Vector2( 9, 0 )
+[node name="ground_check_ray" type="RayCast2D" parent="."]
+position = Vector2( 10, 0 )
 enabled = true
+cast_to = Vector2( 0, 28 )
+
+[node name="ground_check_ray2" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, 28 )
+
+[node name="ground_check_ray3" type="RayCast2D" parent="."]
+position = Vector2( -15, 0 )
+enabled = true
+cast_to = Vector2( 0, 28 )
 
 [node name="behindRay" type="RayCast2D" parent="."]
 position = Vector2( 0, 9 )

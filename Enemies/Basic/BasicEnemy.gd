@@ -34,6 +34,10 @@ var taking_damage = false
 export(NodePath) var _hitbox_collision_shape
 onready var hitbox_shape: CollisionShape2D = get_node(_hitbox_collision_shape)
 
+onready var ground_ray = get_node("ground_check_ray")
+onready var ground_ray2 = get_node("ground_check_ray2")
+onready var ground_ray3 = get_node("ground_check_ray3")
+
 var starting_directions = [-1,1]
 
 func _ready():
@@ -41,17 +45,17 @@ func _ready():
 	if starting_direction < 0:
 		$AnimatedSprite.flip_h = true
 		$Vision.rotation_degrees = 0
-		$RayFloorEdge.position.x = -10
 		$behindRay.position.y = 9
 		$behindRay.rotation_degrees = -90
 		hitbox_shape.rotation_degrees = 68.2
 	elif starting_direction > 0: 
 		$AnimatedSprite.flip_h = false
 		$Vision.rotation_degrees = 90
-		$RayFloorEdge.position.x = 9
 		$behindRay.position.y = 9
 		$behindRay.rotation_degrees = 90
 		hitbox_shape.rotation_degrees = 116.8
+
+
 
 func set_direction() -> float:
 	
@@ -60,7 +64,6 @@ func set_direction() -> float:
 	if direction < 0:
 		$AnimatedSprite.flip_h = true
 		$Vision.rotation_degrees = 0
-		$RayFloorEdge.position.x = -10
 		$behindRay.position.y = 9
 		$behindRay.rotation_degrees = -90
 		hitbox_shape.rotation_degrees = 68.2
@@ -68,7 +71,6 @@ func set_direction() -> float:
 	if direction > 0: 
 		$AnimatedSprite.flip_h = false
 		$Vision.rotation_degrees = 90
-		$RayFloorEdge.position.x = 9
 		$behindRay.position.y = 9
 		$behindRay.rotation_degrees = 90
 		hitbox_shape.rotation_degrees = 116.8
@@ -76,8 +78,14 @@ func set_direction() -> float:
 	return direction 
 
 
-#ADD FLOOR Edge DETETCTION, HIT AND HURT BOXES, KNOCKBACK, BEHIND RAYCAST FUNCTION
-
+# HIT AND HURT BOXES, KNOCKBACK, BEHIND RAYCAST FUNCTION
+func on_floor() -> bool:
+	if (ground_ray.is_colliding() or 
+		ground_ray2.is_colliding() or
+		ground_ray3.is_colliding()):
+		return true
+	else:
+		return false
 
 func _on_EnemyHurtbox_area_entered(hitbox):
 	if hitbox.name == "PlayerHitbox":
