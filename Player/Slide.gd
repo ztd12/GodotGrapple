@@ -10,7 +10,8 @@ func enter(_msg := {}) -> void:
 	animated_sprite.play("slide")
 	
 func physics_update(delta: float) -> void:
-	
+	if owner.taking_damage:
+		state_machine.transition_to("Takehit")
 	
 	if not player.is_on_floor():
 		state_machine.transition_to("Fall")

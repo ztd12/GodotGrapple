@@ -13,6 +13,8 @@ func enter(_msg := {}) -> void:
 	
 	
 func physics_update(delta: float) -> void:
+	if owner.taking_damage:
+		state_machine.transition_to("Takehit")
 	
 	if not is_zero_approx(player.get_input_direction()):
 		player.velocity.x = lerp(player.velocity.x, 
@@ -45,7 +47,7 @@ func physics_update(delta: float) -> void:
 			state_machine.transition_to("Run")
 			
 	if player.position.y > 750:
-		state_machine.transition_to("Dead")
+		state_machine.transition_to("Dead", {falling_death = true})
 		
 		
 

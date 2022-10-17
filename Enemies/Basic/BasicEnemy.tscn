@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://Enemies/Monsters_Creatures_Fantasy/Goblin/Run.png" type="Texture" id=1]
 [ext_resource path="res://Enemies/Monsters_Creatures_Fantasy/Goblin/Take Hit.png" type="Texture" id=2]
@@ -15,6 +15,8 @@
 [ext_resource path="res://Enemies/Basic/Vision.gd" type="Script" id=13]
 [ext_resource path="res://Enemies/Basic/Takehit.gd" type="Script" id=14]
 [ext_resource path="res://Enemies/Basic/Jump.gd" type="Script" id=15]
+[ext_resource path="res://Enemies/Basic/behindRay.gd" type="Script" id=16]
+[ext_resource path="res://Enemies/Basic/EnemyHitbox.gd" type="Script" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 12.5, 17.5 )
@@ -174,6 +176,26 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 450, 0, 150, 150 )
 
+[sub_resource type="AtlasTexture" id=36]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 150, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 300, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 450, 0, 150, 150 )
+
 [sub_resource type="SpriteFrames" id=30]
 animations = [ {
 "frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
@@ -206,15 +228,24 @@ animations = [ {
 "name": "run",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ) ],
+"frames": [ SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
 "loop": false,
 "name": "takehit",
 "speed": 8.0
 } ]
 
+[sub_resource type="CapsuleShape2D" id=34]
+radius = 14.1897
+height = 59.2591
+
+[sub_resource type="CapsuleShape2D" id=35]
+radius = 16.0
+height = 4.0
+
 [node name="Enemy" type="KinematicBody2D"]
 collision_layer = 2
 script = ExtResource( 11 )
+_hitbox_collision_shape = NodePath("EnemyHitbox/CollisionShape2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -2.5, 8.5 )
@@ -229,97 +260,114 @@ _enemyNode = NodePath("..")
 rotation = 1.74533
 enabled = true
 cast_to = Vector2( 0, 400 )
-collision_mask = 3
+collision_mask = 17
 
 [node name="Ray110" type="RayCast2D" parent="Vision"]
 rotation = 1.91986
 enabled = true
 cast_to = Vector2( 0, 400 )
-collision_mask = 3
+collision_mask = 17
 
 [node name="Ray120" type="RayCast2D" parent="Vision"]
 rotation = 2.0944
 enabled = true
 cast_to = Vector2( 0, 400 )
-collision_mask = 3
+collision_mask = 17
 
 [node name="Ray130" type="RayCast2D" parent="Vision"]
 rotation = 2.26893
 enabled = true
 cast_to = Vector2( 0, 400 )
-collision_mask = 3
+collision_mask = 17
 
 [node name="Ray140" type="RayCast2D" parent="Vision"]
 rotation = 2.44346
 enabled = true
 cast_to = Vector2( 0, 400 )
-collision_mask = 3
+collision_mask = 17
 
 [node name="Ray150" type="RayCast2D" parent="Vision"]
 rotation = 2.61799
 enabled = true
 cast_to = Vector2( 0, 400 )
-collision_mask = 3
+collision_mask = 17
 
 [node name="Ray160" type="RayCast2D" parent="Vision"]
 rotation = 2.79253
 enabled = true
 cast_to = Vector2( 0, 400 )
-collision_mask = 3
+collision_mask = 17
 
 [node name="Ray170" type="RayCast2D" parent="Vision"]
 rotation = 2.96706
 enabled = true
 cast_to = Vector2( 0, 400 )
-collision_mask = 3
+collision_mask = 17
 
 [node name="Ray180" type="RayCast2D" parent="Vision"]
 rotation = 3.14159
 enabled = true
 cast_to = Vector2( 0, 400 )
-collision_mask = 3
+collision_mask = 17
 
 [node name="Ray190" type="RayCast2D" parent="Vision"]
 rotation = 3.31613
 enabled = true
 cast_to = Vector2( 0, 400 )
-collision_mask = 3
+collision_mask = 17
 
 [node name="Ray90" type="RayCast2D" parent="Vision"]
 rotation = 1.5708
 enabled = true
 cast_to = Vector2( 0, 400 )
-collision_mask = 3
+collision_mask = 17
 
 [node name="Ray80" type="RayCast2D" parent="Vision"]
 rotation = 1.39626
 enabled = true
 cast_to = Vector2( 0, 400 )
-collision_mask = 3
+collision_mask = 17
 
 [node name="RayFloorEdge" type="RayCast2D" parent="."]
 position = Vector2( 9, 0 )
 enabled = true
 
-[node name="behind" type="RayCast2D" parent="."]
+[node name="behindRay" type="RayCast2D" parent="."]
 position = Vector2( 0, 9 )
-rotation = -1.5708
+rotation = 1.5708
 enabled = true
 cast_to = Vector2( 0, 30 )
-collision_mask = 3
+collision_mask = 16
+script = ExtResource( 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 30 )
-animation = "idle"
+animation = "takehit"
+frame = 7
 playing = true
 
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="EnemyHitbox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 8
+monitoring = false
+monitorable = false
+script = ExtResource( 17 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyHitbox"]
+modulate = Color( 0.0196078, 1, 0, 1 )
+position = Vector2( 0, 5 )
+rotation = 2.03854
+shape = SubResource( 34 )
 
-[node name="Hurtbox" type="Area2D" parent="."]
+[node name="EnemyHurtbox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 4
+monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyHurtbox"]
+modulate = Color( 1, 0.141176, 0, 1 )
+position = Vector2( -2, 9 )
+shape = SubResource( 35 )
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 6 )
@@ -335,10 +383,12 @@ _animation = NodePath("../../AnimatedSprite")
 
 [node name="Death" type="Node" parent="StateMachine"]
 script = ExtResource( 9 )
+_animation = NodePath("../../AnimatedSprite")
 
 [node name="Attack" type="Node" parent="StateMachine"]
 script = ExtResource( 7 )
 _animation = NodePath("../../AnimatedSprite")
+_hitbox = NodePath("../../EnemyHitbox")
 
 [node name="Fall" type="Node" parent="StateMachine"]
 script = ExtResource( 12 )
@@ -346,6 +396,9 @@ _animation = NodePath("../../AnimatedSprite")
 
 [node name="Takehit" type="Node" parent="StateMachine"]
 script = ExtResource( 14 )
+_animation = NodePath("../../AnimatedSprite")
 
 [node name="Jump" type="Node" parent="StateMachine"]
 script = ExtResource( 15 )
+
+[connection signal="area_entered" from="EnemyHurtbox" to="." method="_on_EnemyHurtbox_area_entered"]

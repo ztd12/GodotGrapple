@@ -20,10 +20,14 @@ func detect_player_position():
 
 		if ray.is_colliding():
 			if ray.get_collider().name == "Player":
-				owner.detected_player = true
-				owner.player_position = ray.get_collider().get_global_position()
-				owner.distance_to_player = owner.global_position.distance_to(owner.player_position)
-				rays_colliding_player[i] = true
+				if ray.get_collider().dead == true:
+					owner.detected_player = false
+					return
+				else:
+					owner.detected_player = true
+					owner.player_position = ray.get_collider().get_global_position()
+					owner.distance_to_player = owner.global_position.distance_to(owner.player_position)
+					rays_colliding_player[i] = true
 			else:
 				rays_colliding_player[i] = false
 		else:
@@ -31,4 +35,5 @@ func detect_player_position():
 	if not rays_colliding_player.has(true):
 		owner.detected_player = false
 		owner.player_position = Vector2.ZERO
+		owner.distance_to_player = 9999
 	

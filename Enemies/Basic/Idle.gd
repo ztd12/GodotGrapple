@@ -8,17 +8,20 @@ func enter(_msg := {}) -> void:
 	
 func physics_update(delta: float) -> void:
 	
-	if owner.detected_player == true:
-		if owner.distance_to_player < 45:
-			state_machine.transition_to("Attack")
-		else:
-			state_machine.transition_to("Run")
+	if owner.taking_damage:
+		state_machine.transition_to("Takehit")
+	
+	if owner.dead:
+		state_machine.transition_to("Death")
+	
+	if (owner.detected_player == true) or (owner.player_behind == true):
+		state_machine.transition_to("Run")
 		
+
+		
+	owner.velocity.x = lerp(owner.velocity.x, 0, owner.friction * delta)
+	owner.velocity = owner.move_and_slide(owner.velocity, Vector2.UP)
 	if not owner.is_on_floor():
 		state_machine.transition_to("Fall")
 		return 
 		
-		
-	owner.velocity.x = lerp(owner.velocity.x, 0, owner.friction * delta)
-	owner.velocity = owner.move_and_slide(owner.velocity, Vector2.UP)
-	

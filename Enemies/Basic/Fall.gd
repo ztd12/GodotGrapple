@@ -13,9 +13,9 @@ func enter(_msg := {}) -> void:
 	
 func physics_update(delta: float) -> void:
 	
-	if not is_zero_approx(owner.get_direction()):
+	if not is_zero_approx(owner.set_direction()):
 		owner.velocity.x = lerp(owner.velocity.x, 
-								owner.get_direction() * owner.speed, 
+								owner.set_direction() * owner.speed, 
 								owner.acceleration * delta)
 	else:
 		owner.velocity.x = lerp(owner.velocity.x, 0, owner.air_friction * delta)	
@@ -25,3 +25,6 @@ func physics_update(delta: float) -> void:
 	
 	if owner.is_on_floor():
 		state_machine.transition_to("Idle")
+	
+	if owner.position.y > 750:
+		owner.queue_free()

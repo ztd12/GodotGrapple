@@ -10,8 +10,12 @@ func enter(_msg := {}) -> void:
 	animated_sprite.play("run")
 	
 func physics_update(delta: float) -> void:
-	if owner.distance_to_player < 45:
-		state_machine.transition_to("Attack")
+	if owner.taking_damage:
+		state_machine.transition_to("Takehit")
+		
+	if owner.dead:
+		state_machine.transition_to("Death")
+
 	if owner.player_position.x < owner.position.x:
 		direction = -1
 	elif owner.player_position.x > owner.position.x:
@@ -21,7 +25,12 @@ func physics_update(delta: float) -> void:
 	owner.velocity.y = owner.gravity * delta 
 	owner. velocity = owner.move_and_slide(owner.velocity, Vector2.UP)
 	
-	owner.get_direction()
+	owner.set_direction()
 	
-	if owner.detected_player == false:
+	if owner.distance_to_player < 45:
+		state_machine.transition_to("Attack")
+	
+	if not owner.detected_player and not owner.player_behind:
 		state_machine.transition_to("Idle")
+
+#there is a bug in movement

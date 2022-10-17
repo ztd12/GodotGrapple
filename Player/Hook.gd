@@ -10,6 +10,8 @@ func enter(_msg := {}) -> void:
 	animated_sprite.play("crnr_jmp")
 
 func physics_update(delta: float) -> void:
+	if owner.taking_damage:
+		state_machine.transition_to("Takehit")
 	# Hook physics
 	if grppl.hooked:
 		# `to_local($Chain.tip).normalized()` is the direction that the chain is pulling
@@ -37,6 +39,8 @@ func physics_update(delta: float) -> void:
 
 	
 	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)
+	
+	
 	
 	if Input.is_action_just_released("grapple"):
 		grppl.release()
