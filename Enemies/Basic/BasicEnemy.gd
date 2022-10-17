@@ -34,6 +34,25 @@ var taking_damage = false
 export(NodePath) var _hitbox_collision_shape
 onready var hitbox_shape: CollisionShape2D = get_node(_hitbox_collision_shape)
 
+var starting_directions = [-1,1]
+
+func _ready():
+	var starting_direction = starting_directions[randi() % starting_directions.size()]
+	if starting_direction < 0:
+		$AnimatedSprite.flip_h = true
+		$Vision.rotation_degrees = 0
+		$RayFloorEdge.position.x = -10
+		$behindRay.position.y = 9
+		$behindRay.rotation_degrees = -90
+		hitbox_shape.rotation_degrees = 68.2
+	elif starting_direction > 0: 
+		$AnimatedSprite.flip_h = false
+		$Vision.rotation_degrees = 90
+		$RayFloorEdge.position.x = 9
+		$behindRay.position.y = 9
+		$behindRay.rotation_degrees = 90
+		hitbox_shape.rotation_degrees = 116.8
+
 func set_direction() -> float:
 	
 	var direction = velocity.x
@@ -56,8 +75,6 @@ func set_direction() -> float:
 		
 	return direction 
 
-func _ready():
-	pass
 
 #ADD FLOOR Edge DETETCTION, HIT AND HURT BOXES, KNOCKBACK, BEHIND RAYCAST FUNCTION
 
