@@ -56,18 +56,5 @@ custom_fonts/font = SubResource( 3 )
 text = "Tutorial"
 script = ExtResource( 3 )
 
-[node name="HowToButton" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -95.0
-margin_top = -66.0
-margin_right = 105.0
-margin_bottom = -14.0
-custom_fonts/font = SubResource( 3 )
-text = "How To Play"
-
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="TutorialButton" to="TutorialButton" method="_on_TutorialButton_pressed"]
-[connection signal="pressed" from="HowToButton" to="." method="_on_HowToButton_pressed"]

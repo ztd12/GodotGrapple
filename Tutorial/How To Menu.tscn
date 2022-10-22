@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://HUD/how_to_menu.gd" type="Script" id=1]
+[ext_resource path="res://Tutorial/how_to_menu.gd" type="Script" id=1]
+[ext_resource path="res://Tutorial/nextButton1.gd" type="Script" id=2]
 
 [node name="How To Menu" type="Control"]
 script = ExtResource( 1 )
@@ -13,9 +14,9 @@ color = Color( 0.25098, 0.368627, 0.203922, 1 )
 [node name="Label" type="Label" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 155.0
+margin_left = 151.0
 margin_top = 80.0
-margin_right = 251.0
+margin_right = 247.0
 margin_bottom = 111.0
 rect_scale = Vector2( 3, 3 )
 text = "What to Expect
@@ -40,30 +41,44 @@ rect_scale = Vector2( 2, 2 )
 text = "Move Left: A
 Move Right: D
 Jump: W
-Slide: (A or D) + S
+Double Jump: W + W
+Slide: (Hold A or D) + S
 Attack: Space
-Dodge: (A or D) + Shift 
+Dodge: (Hold A or D) + Shift 
 Grapple: Mouse Click"
 
 [node name="Label4" type="Label" parent="."]
-margin_left = 159.0
-margin_top = 155.0
-margin_right = 304.0
-margin_bottom = 305.0
+margin_left = 125.0
+margin_top = 156.0
+margin_right = 358.0
+margin_bottom = 306.0
 rect_scale = Vector2( 2, 2 )
-text = "Side scrolling adventure game
-Multiple levels that increase in 
-difficulty
-Battle enemies throughout level
+text = "Battle enemies throughout levels.
 Defeat big boss at the end of 
-the level"
+the level.
+Use the grapple feature and jumping
+to move between platforms and
+avoid falling.
+Use attack  or slide to kill enemies.
+Use dodge to protect yourself from 
+enemy attack."
 
 [node name="homeButton" type="Button" parent="."]
-margin_left = 417.0
-margin_top = 509.0
-margin_right = 519.0
-margin_bottom = 529.0
+margin_left = 20.0
+margin_top = 15.0
+margin_right = 122.0
+margin_bottom = 35.0
 rect_scale = Vector2( 2, 2 )
 text = "Back to Home"
 
+[node name="nextButton" type="Button" parent="."]
+margin_left = 438.0
+margin_top = 530.0
+margin_right = 540.0
+margin_bottom = 550.0
+rect_scale = Vector2( 2, 2 )
+text = "Next"
+script = ExtResource( 2 )
+
 [connection signal="pressed" from="homeButton" to="." method="_on_homeButton_pressed"]
+[connection signal="pressed" from="nextButton" to="nextButton" method="_on_nextButton_pressed"]
