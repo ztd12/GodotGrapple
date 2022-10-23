@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://ForestLevel/art/forestlevelplatform.png" type="Texture" id=1]
 [ext_resource path="res://Tutorial/homeButton.gd" type="Script" id=2]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Enemies/Basic/TutorialEnemy.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 499.875, 28.125 )
@@ -62,5 +63,8 @@ rect_scale = Vector2( 3, 3 )
 text = "Battle an Enemy
 "
 uppercase = true
+
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 614, 375 )
 
 [connection signal="pressed" from="homeButton" to="homeButton" method="_on_homeButton_pressed"]
