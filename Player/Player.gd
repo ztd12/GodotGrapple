@@ -11,7 +11,8 @@ var air_friction = 10
 var slide_speed = 500
 var dodge_speed = 400
 
-var health = 100
+var health = 3
+
 
 var  taking_damage = false
 
@@ -31,6 +32,7 @@ onready var ground_ray3 = get_node("ground_check_ray3")
 
 export(NodePath) var _hitbox_collision_shape
 onready var hitbox_shape: CollisionShape2D = get_node(_hitbox_collision_shape)
+
 
 func get_input_direction() -> float:
 	
@@ -65,5 +67,8 @@ func _on_PlayerHurtbox_area_entered(hitbox):
 		self.dead = health < 1
 		self.taking_damage = true
 		print(hitbox.get_parent().name + " dealing " + str(hitbox.damage) + " to " + name, health, dead)
+		
+		Global.lose_life()
+		
 
 #TODO, ADD HURT ANIMATION AND MAKE TAKING DAMAGE FLAG TRANSITION TO TAKEHIT STATE FROM ANY STATE.

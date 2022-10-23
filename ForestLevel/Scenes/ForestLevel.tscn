@@ -476,6 +476,7 @@ texture = ExtResource( 10 )
 stretch_mode = 2
 
 [node name="unfilledhearts" type="TextureRect" parent="."]
+visible = false
 margin_left = 10.0
 margin_top = 25.0
 margin_right = 925.0

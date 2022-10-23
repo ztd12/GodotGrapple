@@ -42,6 +42,10 @@ config/name="GRAPPLE"
 run/main_scene="res://HUD/Main Menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Global.gd"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

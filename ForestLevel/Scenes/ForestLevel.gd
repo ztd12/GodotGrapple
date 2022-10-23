@@ -3,17 +3,16 @@ extends Node2D
 export (NodePath) var _pause_menu
 onready var _pause = get_node(_pause_menu)
 
-var max_lives = 3
-var lives = max_lives 
-
-func ready():
-	load_hearts()
 
 func _on_PauseButton_pressed():
 	get_tree().paused = true
 	_pause.popup()
 
 
+func _ready():
+	load_hearts()
+	Global.hud = self
+	
 func _on_Quit_pressed():
 	get_tree().paused = false
 	get_tree().change_scene("res://HUD/Level Menu.tscn")
@@ -29,8 +28,8 @@ func _on_Mute_pressed():
 							not AudioServer.is_bus_mute(master_sound))
 
 func load_hearts():
-	$hearts.rect_size.x = lives * 600
-	$unfilledhearts.rect_size.x = (max_lives - lives) * 305
+	$hearts.rect_size.x = Global.lives * 600
+	$unfilledhearts.rect_size.x = (Global.max_lives - Global.lives) * 305
 	$unfilledhearts.rect_position.x = $hearts.rect_position.x + $unfilledhearts.rect_size.x * $hearts.rect_scale.x
 	
 
