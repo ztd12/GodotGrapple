@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://mountainLevel/Glacial-mountains-parallax-background_vnitti/Layers/glacial_mountains.png" type="Texture" id=1]
 [ext_resource path="res://mountainLevel/Glacial-mountains-parallax-background_vnitti/Layers/cloud_lonely.png" type="Texture" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://mountainLevel/Glacial-mountains-parallax-background_vnitti/Layers/sky_lightened.png" type="Texture" id=6]
 [ext_resource path="res://mountainLevel/mountain_level_music.wav" type="AudioStream" id=7]
 [ext_resource path="res://mountainLevel/Sprite.gd" type="Script" id=8]
+[ext_resource path="res://mountainLevel/Mountain Level.gd" type="Script" id=9]
+[ext_resource path="res://HUD/pause button.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 37.0936, 5 )
@@ -61,6 +63,8 @@ extents = Vector2( 15.3486, 15.4796 )
 extents = Vector2( 37.8796, 17.9078 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 9 )
+_pause_menu = NodePath("Pause_Menu/Pause Menu")
 
 [node name="b1" type="Sprite" parent="."]
 position = Vector2( 1.78814e-07, 0 )
@@ -468,3 +472,57 @@ scale = Vector2( 2.67187, 2.77778 )
 texture = ExtResource( 2 )
 centered = false
 script = ExtResource( 8 )
+
+[node name="PauseButton" type="TextureButton" parent="."]
+margin_left = 933.0
+margin_top = 8.0
+margin_right = 1833.0
+margin_bottom = 908.0
+rect_scale = Vector2( 0.1, 0.1 )
+texture_normal = ExtResource( 10 )
+
+[node name="Pause_Menu" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="Pause Menu" type="Popup" parent="Pause_Menu"]
+pause_mode = 2
+visible = true
+margin_left = 1.0
+margin_right = 1026.0
+margin_bottom = 600.0
+
+[node name="Resume" type="Button" parent="Pause_Menu/Pause Menu"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -100.0
+margin_top = 138.0
+margin_right = 100.0
+margin_bottom = 178.0
+text = "Resume"
+
+[node name="Mute" type="Button" parent="Pause_Menu/Pause Menu"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -100.0
+margin_top = -176.0
+margin_right = 100.0
+margin_bottom = -136.0
+text = "Mute"
+
+[node name="Quit" type="Button" parent="Pause_Menu/Pause Menu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -20.0
+margin_right = 100.0
+margin_bottom = 20.0
+text = "Quit"
+
+[connection signal="pressed" from="PauseButton" to="." method="_on_PauseButton_pressed"]
+[connection signal="pressed" from="Pause_Menu/Pause Menu/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="Pause_Menu/Pause Menu/Mute" to="." method="_on_Mute_pressed"]
+[connection signal="pressed" from="Pause_Menu/Pause Menu/Quit" to="." method="_on_Quit_pressed"]
