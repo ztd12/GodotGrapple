@@ -70,5 +70,7 @@ func _on_PlayerHurtbox_area_entered(hitbox):
 		
 		Global.lose_life()
 		
+			
+		
 
 #TODO, ADD HURT ANIMATION AND MAKE TAKING DAMAGE FLAG TRANSITION TO TAKEHIT STATE FROM ANY STATE.
