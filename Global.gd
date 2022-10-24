@@ -10,4 +10,3 @@ func lose_life():
 	hud.load_hearts()
 	
 
-
