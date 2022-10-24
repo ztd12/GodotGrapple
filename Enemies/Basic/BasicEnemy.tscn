@@ -355,7 +355,7 @@ script = ExtResource( 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 30 )
-animation = "takehit"
+animation = "attack"
 frame = 7
 playing = true
 
