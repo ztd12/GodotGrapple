@@ -9,7 +9,7 @@ var acceleration = 60
 var friction = 20 
 var air_friction = 10
 
-var health = 100
+var health = 1
 
 var dead:bool = health < 1
 
@@ -57,7 +57,7 @@ func _ready():
 
 func _process(delta):
 
-	self.position.x += -1.5
+	self.position.x += -1.0
 
 func set_direction() -> float:
 	

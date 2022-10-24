@@ -9,7 +9,7 @@ var acceleration = 60
 var friction = 20 
 var air_friction = 10
 
-var health = 100
+var health = 1 # just so that the player can practice hitting him
 
 var dead:bool = health < 1
 

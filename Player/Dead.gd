@@ -12,3 +12,7 @@ func enter(msg := {}) -> void:
 		animated_sprite.play("die")
 		yield(animated_sprite, "animation_finished")	
 		get_tree().change_scene("res://HUD/Level Menu.tscn")
+		
+func update(delta):
+	if animated_sprite.get_frame() == 0:
+		animated_sprite.modulate = Color(100,1,1,1)	
