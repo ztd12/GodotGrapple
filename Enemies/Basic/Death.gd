@@ -15,3 +15,9 @@ func update(delta):
 		animated_sprite.modulate = Color(10,10,10,10)
 	if animated_sprite.get_frame() == 2:
 		animated_sprite.modulate = Color(1,1,1,1)	
+	
+func _physics_update(delta):
+	if animated_sprite.get_frame() == 3:
+		#yield()
+		owner.queue_free() # why does the state machine continue to run after I freed it.
+		#owner.hide()

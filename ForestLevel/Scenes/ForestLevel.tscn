@@ -44,6 +44,7 @@ _pause_menu = NodePath("Pause_Menu/Pause Menu")
 position = Vector2( 0, -2.47955e-05 )
 scale = Vector2( 0.999999, 0.999999 )
 z_index = 1
+collision_mask = 3
 motion/sync_to_physics = true
 script = ExtResource( 11 )
 
@@ -76,6 +77,7 @@ script = ExtResource( 2 )
 [node name="StaticBody2D5" type="KinematicBody2D" parent="Background 1"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
+collision_mask = 3
 
 [node name="Sprite" type="Sprite" parent="Background 1/StaticBody2D5"]
 position = Vector2( 568.501, 435 )
@@ -89,6 +91,7 @@ shape = SubResource( 3 )
 [node name="StaticBody2D6" type="KinematicBody2D" parent="Background 1"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
+collision_mask = 3
 
 [node name="Sprite" type="Sprite" parent="Background 1/StaticBody2D6"]
 position = Vector2( 878.501, 334 )

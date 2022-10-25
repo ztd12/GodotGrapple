@@ -27,4 +27,4 @@ func physics_update(delta: float) -> void:
 		state_machine.transition_to("Idle")
 	
 	if owner.position.y > 750:
-		owner.queue_free()
+		state_machine.transition_to("Death")
