@@ -33,6 +33,9 @@ onready var ground_ray3 = get_node("ground_check_ray3")
 export(NodePath) var _hitbox_collision_shape
 onready var hitbox_shape: CollisionShape2D = get_node(_hitbox_collision_shape)
 
+func _process(delta):
+	if self.position.x < 0:
+		dead = true
 
 func get_input_direction() -> float:
 	
