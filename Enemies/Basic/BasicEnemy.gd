@@ -55,10 +55,6 @@ func _ready():
 		$behindRay.rotation_degrees = 90
 		hitbox_shape.rotation_degrees = 116.8
 
-func _process(delta):
-
-	self.position.x += -1.0
-
 func set_direction() -> float:
 	
 	var direction = velocity.x
@@ -90,7 +86,7 @@ func on_floor() -> bool:
 		return false
 
 func _on_EnemyHurtbox_area_entered(hitbox):
-	if hitbox.name == "PlayerHitbox":
+	if hitbox.name == "PlayerHitbox" or hitbox.name == "PlayerHitbox2":
 		self.health -= hitbox.damage
 		self.taking_damage = true
 		self.dead = health < 1
