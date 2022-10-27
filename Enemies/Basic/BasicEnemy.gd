@@ -100,5 +100,5 @@ func _on_EnemyHurtbox_area_entered(hitbox):
 		
 		self.threat_position = hitbox.global_position.x
 		#print(self.position.x,"  enemy: ", hitbox.global_position.x)
-#there is a bug in movement
+
 #there is bug in death
