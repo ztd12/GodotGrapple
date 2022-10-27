@@ -11,8 +11,15 @@ func enter(_msg := {}) -> void:
 func physics_update(delta: float) -> void:
 	if owner.taking_damage:
 		state_machine.transition_to("Takehit")
-	owner.velocity.x = lerp(owner.velocity.x, 0, owner.friction * delta)
-	owner.velocity = owner.move_and_slide(owner.velocity, Vector2.UP)
-	if animated_sprite.get_frame() >= 7:
+		
+	if owner.position.x <= owner.threat_position:	
+		owner.velocity.x = owner.velocity.x - owner.knockback_x#lerp(owner.velocity.x, owner.velocity.x-owner.knockback_x, 0.2)
+	elif owner.position.x >= owner.threat_position:
+		owner.velocity.x = owner.velocity.x + owner.knockback_x#lerp(owner.velocity.x, owner.velocity.x+owner.knockback_x, 0.2)
+	owner.velocity.y -= owner.knockback_y
+	owner.velocity = owner.move_and_slide(owner.velocity, Vector2.UP)	
+	
+	
+	if animated_sprite.get_frame() >= 5:
 		owner.taking_damage = false
 		state_machine.transition_to("Idle")

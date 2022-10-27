@@ -9,9 +9,13 @@ var acceleration = 60
 var friction = 20 
 var air_friction = 10
 
+var knockback_x = 20
+var knockback_y = 10
+var threat_position = 0
+
 var health = 1
 
-var dead:bool = health < 1
+var dead:bool = health <= 0
 
 #var slide_speed = 500
 #var dodge_speed = 400
@@ -27,7 +31,7 @@ var velocity := Vector2.ZERO
 var player_behind = false
 var detected_player = false
 var player_position = Vector2.ZERO
-var distance_to_player = Vector2.ZERO
+var distance_to_player = 9999
 
 var taking_damage = false
 
@@ -87,11 +91,14 @@ func on_floor() -> bool:
 
 func _on_EnemyHurtbox_area_entered(hitbox):
 	if hitbox.name == "PlayerHitbox" or hitbox.name == "PlayerHitbox2":
+		if hitbox.name == "PlayerHitbox2":
+			self.knockback_x *= 10
 		self.health -= hitbox.damage
 		self.taking_damage = true
-		self.dead = health < 1
+		self.dead = health <= 0
 		print(hitbox.get_parent().name + " dealing " + str(hitbox.damage) + " to " + name,"health: ",health,"dead: ", dead)
-
-
+		
+		self.threat_position = hitbox.global_position.x
+		#print(self.position.x,"  enemy: ", hitbox.global_position.x)
 #there is a bug in movement
 #there is bug in death

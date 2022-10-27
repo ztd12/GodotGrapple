@@ -1,3 +1,3 @@
 extends Area2D
 
-export (int) var damage: int = 1
+export (float) var damage: float = 0.5

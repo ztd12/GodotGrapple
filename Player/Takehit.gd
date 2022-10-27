@@ -8,6 +8,7 @@ onready var animated_sprite: AnimatedSprite = get_node(_animation)
 func enter(_msg := {}) -> void:
 	animated_sprite.play("hurt")
 	animated_sprite.modulate = Color(100,1,1,1)
+	yield(get_tree().create_timer(.2), "timeout")
 	
 
 
@@ -32,10 +33,10 @@ func physics_update(delta: float) -> void:
 		return 
 	
 	
-	if player.position.x > player.threat_position:	
-		player.velocity.x = lerp(player.velocity.x, player.velocity.x-(player.knockback_force*3.8), 0.2)
-	elif player.position.x < player.threat_position:
-		player.velocity.x = lerp(player.velocity.x, player.velocity.x+(player.knockback_force*3.8), 0.2)
+	if player.position.x <= player.threat_position:	
+		player.velocity.x = player.velocity.x-(player.knockback_force*3.8) #lerp(player.velocity.x, player.velocity.x-(player.knockback_force*3.8), 0.2)
+	elif player.position.x >= player.threat_position:
+		player.velocity.x = player.velocity.x+(player.knockback_force*3.8)#lerp(player.velocity.x, player.velocity.x+(player.knockback_force*3.8), 0.2)
 	player.velocity.y -= player.knockback_force
 	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)	
 	

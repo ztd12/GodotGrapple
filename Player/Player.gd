@@ -12,7 +12,6 @@ var slide_speed = 500
 var dodge_speed = 400
 
 var knockback_force = 20
-
 var threat_position = 0
 
 var health = 3
@@ -77,8 +76,9 @@ func _on_PlayerHurtbox_area_entered(hitbox):
 		
 		Global.lose_life()
 		
-		threat_position = hitbox.position.x
+		self.threat_position = hitbox.global_position.x
+		#print(self.position.x,"  enemy: ", hitbox.global_position.x)
 			
 		
 
-#TODO, ADD HURT ANIMATION AND MAKE TAKING DAMAGE FLAG TRANSITION TO TAKEHIT STATE FROM ANY STATE.
+
