@@ -19,5 +19,5 @@ func update(delta):
 func _physics_update(delta):
 	if animated_sprite.get_frame() == 3:
 		#yield()
-		owner.queue_free() # why does the state machine continue to run after I freed it.
-		#owner.hide()
+		#owner.free() # why does the state machine continue to run after I freed it and why does the sprite not dissapear
+		owner.hide()

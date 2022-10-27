@@ -22,7 +22,7 @@ func physics_update(delta: float) -> void:
 		
 
 		
-	owner.velocity.x = lerp(owner.velocity.x, -1.5, owner.friction * delta)
+	owner.velocity.x = lerp(owner.velocity.x, 0, owner.friction * delta)
 	owner.velocity = owner.move_and_slide(owner.velocity, Vector2.UP)
 	if not owner.on_floor():
 		state_machine.transition_to("Fall")

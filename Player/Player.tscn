@@ -134,7 +134,7 @@ animations = [ {
 "frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 7 ) ],
 "loop": false,
 "name": "die",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 42 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 46 ), ExtResource( 81 ), ExtResource( 45 ) ],
 "loop": false,
@@ -146,10 +146,10 @@ animations = [ {
 "name": "fall",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 6 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 6 ) ],
 "loop": false,
 "name": "hurt",
-"speed": 5.0
+"speed": 20.0
 }, {
 "frames": [ ExtResource( 75 ), ExtResource( 76 ), ExtResource( 74 ), ExtResource( 73 ) ],
 "loop": true,
@@ -207,8 +207,9 @@ shape = SubResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 1.5, 1.50676 )
 frames = SubResource( 1 )
-animation = "slide"
-frame = 2
+animation = "hurt"
+frame = 3
+playing = true
 
 [node name="ground_check_ray" type="RayCast2D" parent="."]
 enabled = true

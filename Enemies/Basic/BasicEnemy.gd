@@ -90,4 +90,8 @@ func _on_EnemyHurtbox_area_entered(hitbox):
 		self.health -= hitbox.damage
 		self.taking_damage = true
 		self.dead = health < 1
-		print(hitbox.get_parent().name + " dealing " + str(hitbox.damage) + " to " + name, health, dead)
+		print(hitbox.get_parent().name + " dealing " + str(hitbox.damage) + " to " + name,"health: ",health,"dead: ", dead)
+
+
+#there is a bug in movement
+#there is bug in death

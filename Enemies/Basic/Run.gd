@@ -43,3 +43,4 @@ func physics_update(delta: float) -> void:
 		state_machine.transition_to("Idle")
 
 #there is a bug in movement
+#there is bug in death
