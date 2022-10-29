@@ -9,6 +9,7 @@ func _on_PauseButton_pressed():
 	_pause.popup()
 
 
+
 func _ready():
 	Global.lives = Global.max_lives
 	load_hearts()

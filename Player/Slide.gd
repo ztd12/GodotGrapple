@@ -29,7 +29,7 @@ func physics_update(delta: float) -> void:
 		#						player.get_input_direction() * player.slide_speed,
 		#						player.acceleration * delta)
 		player.velocity.x = lerp(player.slide_speed *player.get_input_direction(),
-								0, player.friction * delta)
+								0, (player.friction - player.friction*0.5) * delta)
 	player.velocity.y += player.gravity * delta
 	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)
 	
