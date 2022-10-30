@@ -14,6 +14,7 @@ func enter(_msg := {}) -> void:
 func update(delta):
 	if animated_sprite.get_frame() == 3:
 		animated_sprite.modulate = Color(100,1,1,50)
+		yield(get_tree().create_timer(.3), "timeout")
 	if animated_sprite.get_frame() > 4:
 		animated_sprite.modulate = Color(1,1,1,1)		
 	
@@ -33,7 +34,7 @@ func physics_update(delta: float) -> void:
 		animated_sprite.modulate = Color(1,1,1,1)
 		state_machine.transition_to("Idle")
 	
-	if owner.detected_player == true and owner.distance_to_player > 45:
+	if owner.detected_player == true and owner.distance_to_player > 55:
 		hitbox.monitorable = false
 		animated_sprite.modulate = Color(1,1,1,1)
 		state_machine.transition_to("Run")

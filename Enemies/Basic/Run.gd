@@ -35,7 +35,7 @@ func physics_update(delta: float) -> void:
 	
 	owner.set_direction()
 	
-	if owner.distance_to_player < 45:
+	if owner.distance_to_player < 55:
 		
 		state_machine.transition_to("Attack")
 	
@@ -43,3 +43,4 @@ func physics_update(delta: float) -> void:
 		state_machine.transition_to("Idle")
 
 #there is a bug in movement
+#there is bug in death

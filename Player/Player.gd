@@ -6,10 +6,13 @@ var jump_impulse = 700
 var maximum_jumps := 2 
 var gravity = 2500
 var acceleration = 60
-var friction = 20 
+var friction = 40
 var air_friction = 10
 var slide_speed = 500
 var dodge_speed = 400
+
+var knockback_force = 20
+var threat_position = 0
 
 var health = 3
 
@@ -33,6 +36,9 @@ onready var ground_ray3 = get_node("ground_check_ray3")
 export(NodePath) var _hitbox_collision_shape
 onready var hitbox_shape: CollisionShape2D = get_node(_hitbox_collision_shape)
 
+func _process(delta):
+	if self.position.x < 0:
+		dead = true
 
 func get_input_direction() -> float:
 	
@@ -63,6 +69,7 @@ func on_floor() -> bool:
 
 func _on_PlayerHurtbox_area_entered(hitbox):
 	if hitbox.name == "EnemyHitbox":
+		$injured_audio.play()
 		self.health -= hitbox.damage
 		self.dead = health < 1
 		self.taking_damage = true
@@ -70,7 +77,9 @@ func _on_PlayerHurtbox_area_entered(hitbox):
 		
 		Global.lose_life()
 		
+		self.threat_position = hitbox.global_position.x
+		#print(self.position.x,"  enemy: ", hitbox.global_position.x)
 			
 		
 
-#TODO, ADD HURT ANIMATION AND MAKE TAKING DAMAGE FLAG TRANSITION TO TAKEHIT STATE FROM ANY STATE.
+

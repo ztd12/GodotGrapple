@@ -10,6 +10,7 @@ func lose_life():
 	hud.load_hearts()
 	
 	if lives <= 0:
-		get_tree().change_scene("res://HUD/Level Menu.tscn")
+		hud.load_hearts() # why does the extra heart appear?
+		yield(get_tree().create_timer(.7), "timeout") #to let the death animation play and death music/sound
 	
 

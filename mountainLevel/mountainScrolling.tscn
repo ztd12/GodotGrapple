@@ -87,7 +87,7 @@ texture = ExtResource( 4 )
 centered = false
 script = ExtResource( 8 )
 
-[node name="platform1" type="StaticBody2D" parent="b3"]
+[node name="platform1" type="KinematicBody2D" parent="b3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
@@ -100,7 +100,7 @@ texture = ExtResource( 3 )
 position = Vector2( 40.979, 141.033 )
 shape = SubResource( 9 )
 
-[node name="platform2" type="StaticBody2D" parent="b3"]
+[node name="platform2" type="KinematicBody2D" parent="b3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
@@ -113,7 +113,7 @@ texture = ExtResource( 3 )
 position = Vector2( 127.828, 117.262 )
 shape = SubResource( 10 )
 
-[node name="platform3" type="StaticBody2D" parent="b3"]
+[node name="platform3" type="KinematicBody2D" parent="b3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
@@ -154,7 +154,7 @@ texture = ExtResource( 4 )
 centered = false
 script = ExtResource( 8 )
 
-[node name="platform1" type="StaticBody2D" parent="a3"]
+[node name="platform1" type="KinematicBody2D" parent="a3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
@@ -167,7 +167,7 @@ texture = ExtResource( 3 )
 position = Vector2( 27.4866, 141.161 )
 shape = SubResource( 7 )
 
-[node name="platform2" type="StaticBody2D" parent="a3"]
+[node name="platform2" type="KinematicBody2D" parent="a3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
@@ -180,7 +180,7 @@ texture = ExtResource( 3 )
 position = Vector2( 183.501, 159.309 )
 shape = SubResource( 2 )
 
-[node name="platform3" type="StaticBody2D" parent="a3"]
+[node name="platform3" type="KinematicBody2D" parent="a3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
@@ -193,7 +193,7 @@ texture = ExtResource( 3 )
 position = Vector2( 106.345, 93.4917 )
 shape = SubResource( 8 )
 
-[node name="platform4" type="StaticBody2D" parent="a3"]
+[node name="platform4" type="KinematicBody2D" parent="a3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
@@ -213,7 +213,7 @@ texture = ExtResource( 2 )
 centered = false
 script = ExtResource( 8 )
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 autoplay = true
 
