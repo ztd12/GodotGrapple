@@ -1,12 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ForestLevel/art/forestlevelplatform.png" type="Texture" id=2]
 [ext_resource path="res://Tutorial/homeButton.gd" type="Script" id=3]
 [ext_resource path="res://Tutorial/nextButton1b.gd" type="Script" id=4]
+[ext_resource path="res://HUD/mainFont50.tres" type="DynamicFont" id=5]
+[ext_resource path="res://HUD/mainFont25.tres" type="DynamicFont" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 515, 28.125 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 35, 266 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -20,8 +25,8 @@ color = Color( 0.25098, 0.368627, 0.203922, 1 )
 [node name="StaticBody2D" type="StaticBody2D" parent="ColorRect"]
 
 [node name="Sprite" type="Sprite" parent="ColorRect/StaticBody2D"]
-position = Vector2( 516, 480 )
-scale = Vector2( 3.4375, 1.00373 )
+position = Vector2( 516.5, 480 )
+scale = Vector2( 3.55903, 1.00373 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect/StaticBody2D"]
@@ -33,16 +38,18 @@ margin_left = 25.0
 margin_top = 19.0
 margin_right = 127.0
 margin_bottom = 39.0
-rect_scale = Vector2( 2, 2 )
+rect_scale = Vector2( 0.75, 0.75 )
+custom_fonts/font = ExtResource( 5 )
 text = "End Tutorial"
 script = ExtResource( 3 )
 
 [node name="nextButton" type="Button" parent="."]
-margin_left = 838.0
-margin_top = 312.0
-margin_right = 893.0
-margin_bottom = 332.0
-rect_scale = Vector2( 2, 2 )
+margin_left = 878.0
+margin_top = 300.0
+margin_right = 1010.0
+margin_bottom = 373.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_fonts/font = ExtResource( 5 )
 text = "Next"
 script = ExtResource( 4 )
 
@@ -51,26 +58,27 @@ position = Vector2( 359, 98 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 665.0
-margin_top = 64.0
-margin_right = 844.0
-margin_bottom = 163.0
-rect_scale = Vector2( 2, 2 )
+margin_left = 579.0
+margin_top = 11.0
+margin_right = 1014.0
+margin_bottom = 119.0
+custom_fonts/font = ExtResource( 6 )
 text = "Slide: (Hold A or D) + S
 Attack: Space
-Dodge: (Hold A or D) + Shift "
+Dodge: (Hold A or D) + Shift"
+align = 2
 
-[node name="Label1" type="Label" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 663.0
-margin_top = 10.0
-margin_right = -256.0
-margin_bottom = -559.0
-rect_scale = Vector2( 3, 3 )
-text = "Test Controls!
-"
-uppercase = true
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -28, 247 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 1053, 248 )
+shape = SubResource( 2 )
 
 [connection signal="pressed" from="homeButton" to="homeButton" method="_on_homeButton_pressed"]
 [connection signal="pressed" from="nextButton" to="nextButton" method="_on_nextButton_pressed"]
