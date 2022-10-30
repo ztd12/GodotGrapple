@@ -9,7 +9,7 @@
 [ext_resource path="res://SpaceLevel/parallax-space-ring-planet.png" type="Texture" id=7]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://SpaceLevel/space platform.png" type="Texture" id=9]
-[ext_resource path="res://SpaceLevel/[YT2mp3.info] - Star Wars MEGA-MIX (8 Bit Cover Compilation) [Tribute to Star Wars] - 8 Bit Universe (320kbps).mp3" type="AudioStream" id=10]
+[ext_resource path="res://SpaceLevel/[YT2mp3.info] - Star Wars MEGA-MIX (8 Bit Cover Compilation) [Tribute to Star Wars] - 8 Bit Universe (320kbps) (1).mp3" type="AudioStream" id=10]
 [ext_resource path="res://HUD/white pause image.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
