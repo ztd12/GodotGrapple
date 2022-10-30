@@ -90,6 +90,7 @@ func on_floor() -> bool:
 		return false
 
 func _on_EnemyHurtbox_area_entered(hitbox):
+	$enemyHurtAudio.play()
 	if hitbox.name == "PlayerHitbox" or hitbox.name == "PlayerHitbox2":
 		if hitbox.name == "PlayerHitbox2":
 			self.knockback_x *= 10

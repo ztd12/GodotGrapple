@@ -69,6 +69,7 @@ func on_floor() -> bool:
 
 func _on_PlayerHurtbox_area_entered(hitbox):
 	if hitbox.name == "EnemyHitbox":
+		$injured_audio.play()
 		self.health -= hitbox.damage
 		self.dead = health < 1
 		self.taking_damage = true
