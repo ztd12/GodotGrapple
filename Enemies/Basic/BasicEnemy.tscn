@@ -337,7 +337,6 @@ cast_to = Vector2( 0, 28 )
 position = Vector2( 0, 9 )
 rotation = 1.5708
 enabled = true
-cast_to = Vector2( 0, 30 )
 collision_mask = 16
 script = ExtResource( 16 )
 

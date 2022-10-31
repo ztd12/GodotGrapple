@@ -6,7 +6,14 @@ onready var animated_sprite: AnimatedSprite = get_node(_animation)
 
 
 
-func enter(_msg := {}) -> void:
+func enter(msg := {}) -> void:
+	if msg.has("falling_death"):
+		#play a falling scream sound?
+		owner.queue_free()
+		return
+	if msg.has("outofscreen"):
+		owner.queue_free()
+		return
 	animated_sprite.play("death")
 
 

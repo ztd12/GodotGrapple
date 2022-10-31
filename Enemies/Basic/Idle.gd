@@ -9,6 +9,9 @@ func enter(_msg := {}) -> void:
 	
 func physics_update(delta: float) -> void:
 	
+	if owner.position.x < 0: 
+		state_machine.transition_to("Death", {outofscreen = true})
+	
 	if owner.taking_damage:
 		state_machine.transition_to("Takehit")
 	

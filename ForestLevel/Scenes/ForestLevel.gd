@@ -8,12 +8,49 @@ func _on_PauseButton_pressed():
 	get_tree().paused = true
 	_pause.popup()
 
+var rand = RandomNumberGenerator.new()
+var enemyscene = load("res://Enemies/Basic/BasicEnemy.tscn")
+	
+onready var screen_size = get_viewport().get_visible_rect().size
 
+func enemyspawner():
+	for i in range(0,10):
+		var enemy = enemyscene.instance()
+		enemy.connect("tree_exited",self,"_on_Enemy_tree_exited")
+		rand.randomize()
+		var x = rand.randf_range(0,screen_size.x)
+		rand.randomize()
+		var y = rand.randf_range(0, 300)
+		enemy.position.y = y 
+		enemy.position.x = x
+		add_child(enemy)
+		enemy.add_to_group("enemies")
+		
 
 func _ready():
 	Global.lives = Global.max_lives
 	load_hearts()
 	Global.hud = self
+	enemyspawner()
+
+func _process(delta):
+	
+	var count = get_tree().get_nodes_in_group("enemies").size()
+	
+	if count == 0:
+		print("creating 10 enemies")
+		for i in range(0,10):
+			var enemy = enemyscene.instance()
+			enemy.connect("tree_exited",self,"_on_Enemy_tree_exited")
+			rand.randomize()
+			var x = rand.randf_range(0,screen_size.x)
+			rand.randomize()
+			var y = rand.randf_range(0, 300)
+			enemy.position.y = y 
+			enemy.position.x = x
+			add_child(enemy)
+			enemy.add_to_group("enemies")
+			
 	
 func _on_Quit_pressed():
 	get_tree().paused = false
