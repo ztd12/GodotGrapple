@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://HUD/pause button.png" type="Texture" id=1]
 [ext_resource path="res://ForestLevel/Scripts/Background 1.gd" type="Script" id=2]
@@ -7,9 +7,8 @@
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ForestLevel/art/forestlevelplatform.png" type="Texture" id=6]
 [ext_resource path="res://ForestLevel/Scenes/ForestLevel.gd" type="Script" id=7]
-[ext_resource path="res://Enemies/Basic/BasicEnemy.tscn" type="PackedScene" id=8]
-[ext_resource path="res://HUD/transparent heart.png" type="Texture" id=9]
-[ext_resource path="res://HUD/red heart.png" type="Texture" id=10]
+[ext_resource path="res://unfilledhearts.tscn" type="PackedScene" id=8]
+[ext_resource path="res://hearts.tscn" type="PackedScene" id=9]
 [ext_resource path="res://ForestLevel/Scenes/movingplat.gd" type="Script" id=11]
 [ext_resource path="res://ForestLevel/Scenes/Countdown Timer.gd" type="Script" id=12]
 
@@ -464,36 +463,9 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Enemy" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1160, 472 )
+[node name="hearts" parent="." instance=ExtResource( 9 )]
 
-[node name="Enemy2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 856, 258 )
-
-[node name="Enemy3" parent="." instance=ExtResource( 8 )]
-position = Vector2( 608, 344 )
-
-[node name="Enemy4" parent="." instance=ExtResource( 8 )]
-position = Vector2( 272, 412 )
-
-[node name="hearts" type="TextureRect" parent="."]
-margin_left = 10.0
-margin_top = 25.0
-margin_right = 1810.0
-margin_bottom = 582.0
-rect_scale = Vector2( 0.07, 0.07 )
-texture = ExtResource( 10 )
-stretch_mode = 2
-
-[node name="unfilledhearts" type="TextureRect" parent="."]
-margin_left = 10.0
-margin_top = 25.0
-margin_right = 925.0
-margin_bottom = 305.0
-rect_scale = Vector2( 0.14, 0.14 )
-texture = ExtResource( 9 )
-expand = true
-stretch_mode = 2
+[node name="unfilledhearts" parent="." instance=ExtResource( 8 )]
 
 [node name="Countdown" type="Control" parent="."]
 margin_left = 26.0
