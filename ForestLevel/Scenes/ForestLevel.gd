@@ -3,6 +3,7 @@ extends Node2D
 export (NodePath) var _pause_menu
 onready var _pause = get_node(_pause_menu)
 
+var num_of_enemies = 5
 
 func _on_PauseButton_pressed():
 	get_tree().paused = true
@@ -14,7 +15,7 @@ var enemyscene = load("res://Enemies/Basic/BasicEnemy.tscn")
 onready var screen_size = get_viewport().get_visible_rect().size
 
 func enemyspawner():
-	for i in range(0,10):
+	for i in range(0,num_of_enemies):
 		var enemy = enemyscene.instance()
 		rand.randomize()
 		var x = rand.randf_range(0,screen_size.x)
@@ -38,7 +39,7 @@ func _process(delta):
 	
 	if count == 0:
 		print("creating 10 enemies")
-		for i in range(0,10):
+		for i in range(0,num_of_enemies):
 			var enemy = enemyscene.instance()
 			rand.randomize()
 			var x = rand.randf_range(0,screen_size.x)

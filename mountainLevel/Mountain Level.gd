@@ -8,8 +8,10 @@ var enemyscene = load("res://Enemies/Basic/BasicEnemy.tscn")
 	
 onready var screen_size = get_viewport().get_visible_rect().size
 
+var num_of_enemies = 5
+
 func enemyspawner():
-	for i in range(0,10):
+	for i in range(0,num_of_enemies):
 		var enemy = enemyscene.instance()
 		enemy.connect("tree_exited",self,"_on_Enemy_tree_exited")
 		rand.randomize()
@@ -34,9 +36,8 @@ func _process(delta):
 	
 	if count == 0:
 		print("creating 10 enemies")
-		for i in range(0,10):
+		for i in range(0,num_of_enemies):
 			var enemy = enemyscene.instance()
-			enemy.connect("tree_exited",self,"_on_Enemy_tree_exited")
 			rand.randomize()
 			var x = rand.randf_range(0,screen_size.x)
 			rand.randomize()
