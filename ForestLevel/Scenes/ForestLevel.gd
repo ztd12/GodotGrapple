@@ -16,7 +16,6 @@ onready var screen_size = get_viewport().get_visible_rect().size
 func enemyspawner():
 	for i in range(0,10):
 		var enemy = enemyscene.instance()
-		enemy.connect("tree_exited",self,"_on_Enemy_tree_exited")
 		rand.randomize()
 		var x = rand.randf_range(0,screen_size.x)
 		rand.randomize()
@@ -41,7 +40,6 @@ func _process(delta):
 		print("creating 10 enemies")
 		for i in range(0,10):
 			var enemy = enemyscene.instance()
-			enemy.connect("tree_exited",self,"_on_Enemy_tree_exited")
 			rand.randomize()
 			var x = rand.randf_range(0,screen_size.x)
 			rand.randomize()
