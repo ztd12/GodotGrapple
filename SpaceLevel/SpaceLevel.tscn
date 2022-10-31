@@ -56,7 +56,7 @@ position = Vector2( -0.120697, 0 )
 scale = Vector2( 0.998225, 1.00667 )
 texture = ExtResource( 1 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Background1"]
+[node name="StaticBody2D" type="KinematicBody2D" parent="Background1"]
 
 [node name="Sprite" type="Sprite" parent="Background1/StaticBody2D"]
 position = Vector2( -84.4721, 33.8542 )
@@ -67,7 +67,7 @@ texture = ExtResource( 9 )
 position = Vector2( -84.2831, 33.5333 )
 shape = SubResource( 1 )
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Background1"]
+[node name="StaticBody2D2" type="KinematicBody2D" parent="Background1"]
 
 [node name="Sprite" type="Sprite" parent="Background1/StaticBody2D2"]
 position = Vector2( -33.7152, 0.266663 )
@@ -78,7 +78,7 @@ texture = ExtResource( 9 )
 position = Vector2( -34.0826, 0.600006 )
 shape = SubResource( 2 )
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="Background1"]
+[node name="StaticBody2D3" type="KinematicBody2D" parent="Background1"]
 
 [node name="Sprite" type="Sprite" parent="Background1/StaticBody2D3"]
 position = Vector2( 42.8762, -46.1333 )
@@ -89,7 +89,7 @@ texture = ExtResource( 9 )
 position = Vector2( 43.511, -46 )
 shape = SubResource( 3 )
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="Background1"]
+[node name="StaticBody2D4" type="KinematicBody2D" parent="Background1"]
 
 [node name="Sprite" type="Sprite" parent="Background1/StaticBody2D4"]
 position = Vector2( 110.8, 32.5333 )
@@ -126,7 +126,7 @@ position = Vector2( -0.120697, 0 )
 scale = Vector2( 0.998225, 1.00667 )
 texture = ExtResource( 1 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Background2"]
+[node name="StaticBody2D" type="KinematicBody2D" parent="Background2"]
 position = Vector2( 0, 27.2 )
 
 [node name="Sprite" type="Sprite" parent="Background2/StaticBody2D"]
@@ -138,7 +138,7 @@ texture = ExtResource( 9 )
 position = Vector2( -84.2831, 33.5333 )
 shape = SubResource( 1 )
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Background2"]
+[node name="StaticBody2D2" type="KinematicBody2D" parent="Background2"]
 position = Vector2( 0, 21.8667 )
 
 [node name="Sprite" type="Sprite" parent="Background2/StaticBody2D2"]
@@ -150,7 +150,7 @@ texture = ExtResource( 9 )
 position = Vector2( -34.0826, 0.600006 )
 shape = SubResource( 2 )
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="Background2"]
+[node name="StaticBody2D3" type="KinematicBody2D" parent="Background2"]
 position = Vector2( -8.9299, 10.1333 )
 
 [node name="Sprite" type="Sprite" parent="Background2/StaticBody2D3"]
@@ -162,7 +162,7 @@ texture = ExtResource( 9 )
 position = Vector2( 43.511, -46 )
 shape = SubResource( 3 )
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="Background2"]
+[node name="StaticBody2D4" type="KinematicBody2D" parent="Background2"]
 
 [node name="Sprite" type="Sprite" parent="Background2/StaticBody2D4"]
 position = Vector2( 110.8, 32.5333 )
@@ -199,7 +199,7 @@ position = Vector2( -0.120697, 0 )
 scale = Vector2( 0.998225, 1.00667 )
 texture = ExtResource( 1 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Background3"]
+[node name="StaticBody2D" type="KinematicBody2D" parent="Background3"]
 position = Vector2( 0, -36.2667 )
 
 [node name="Sprite" type="Sprite" parent="Background3/StaticBody2D"]
@@ -211,7 +211,7 @@ texture = ExtResource( 9 )
 position = Vector2( -84.2831, 33.5333 )
 shape = SubResource( 1 )
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Background3"]
+[node name="StaticBody2D2" type="KinematicBody2D" parent="Background3"]
 position = Vector2( 12.5502, 21.8667 )
 
 [node name="Sprite" type="Sprite" parent="Background3/StaticBody2D2"]
@@ -223,7 +223,7 @@ texture = ExtResource( 9 )
 position = Vector2( -34.0826, 0.600006 )
 shape = SubResource( 2 )
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="Background3"]
+[node name="StaticBody2D3" type="KinematicBody2D" parent="Background3"]
 position = Vector2( 2.65482, 106.4 )
 
 [node name="Sprite" type="Sprite" parent="Background3/StaticBody2D3"]
@@ -235,7 +235,7 @@ texture = ExtResource( 9 )
 position = Vector2( 43.511, -46 )
 shape = SubResource( 3 )
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="Background3"]
+[node name="StaticBody2D4" type="KinematicBody2D" parent="Background3"]
 
 [node name="Sprite" type="Sprite" parent="Background3/StaticBody2D4"]
 position = Vector2( 110.8, 32.5333 )
@@ -272,7 +272,7 @@ position = Vector2( -0.120697, 0 )
 scale = Vector2( 0.998225, 1.00667 )
 texture = ExtResource( 1 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Background4"]
+[node name="StaticBody2D" type="KinematicBody2D" parent="Background4"]
 position = Vector2( 0, -36.2667 )
 
 [node name="Sprite" type="Sprite" parent="Background4/StaticBody2D"]
@@ -284,7 +284,7 @@ texture = ExtResource( 9 )
 position = Vector2( -84.2831, 33.5333 )
 shape = SubResource( 1 )
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Background4"]
+[node name="StaticBody2D2" type="KinematicBody2D" parent="Background4"]
 position = Vector2( 10.8607, -39.7333 )
 
 [node name="Sprite" type="Sprite" parent="Background4/StaticBody2D2"]
@@ -296,7 +296,7 @@ texture = ExtResource( 9 )
 position = Vector2( -34.0826, 0.600006 )
 shape = SubResource( 2 )
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="Background4"]
+[node name="StaticBody2D3" type="KinematicBody2D" parent="Background4"]
 position = Vector2( 2.65482, 106.4 )
 
 [node name="Sprite" type="Sprite" parent="Background4/StaticBody2D3"]
@@ -308,7 +308,7 @@ texture = ExtResource( 9 )
 position = Vector2( 43.511, -46 )
 shape = SubResource( 3 )
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="Background4"]
+[node name="StaticBody2D4" type="KinematicBody2D" parent="Background4"]
 position = Vector2( 0, -16.2666 )
 
 [node name="Sprite" type="Sprite" parent="Background4/StaticBody2D4"]
@@ -346,7 +346,7 @@ position = Vector2( -0.120697, 0 )
 scale = Vector2( 0.998225, 1.00667 )
 texture = ExtResource( 1 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Background5"]
+[node name="StaticBody2D" type="KinematicBody2D" parent="Background5"]
 position = Vector2( 0, -61.8667 )
 
 [node name="Sprite" type="Sprite" parent="Background5/StaticBody2D"]
@@ -358,7 +358,7 @@ texture = ExtResource( 9 )
 position = Vector2( -84.2831, 33.5333 )
 shape = SubResource( 1 )
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Background5"]
+[node name="StaticBody2D2" type="KinematicBody2D" parent="Background5"]
 position = Vector2( 10.8607, -9.86666 )
 
 [node name="Sprite" type="Sprite" parent="Background5/StaticBody2D2"]
@@ -370,7 +370,7 @@ texture = ExtResource( 9 )
 position = Vector2( -34.0826, 0.600006 )
 shape = SubResource( 2 )
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="Background5"]
+[node name="StaticBody2D3" type="KinematicBody2D" parent="Background5"]
 position = Vector2( 2.65482, 82.4 )
 
 [node name="Sprite" type="Sprite" parent="Background5/StaticBody2D3"]
@@ -382,7 +382,7 @@ texture = ExtResource( 9 )
 position = Vector2( 43.511, -46 )
 shape = SubResource( 3 )
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="Background5"]
+[node name="StaticBody2D4" type="KinematicBody2D" parent="Background5"]
 position = Vector2( 0, -16.2666 )
 
 [node name="Sprite" type="Sprite" parent="Background5/StaticBody2D4"]
