@@ -29,9 +29,12 @@ func _physics_process(delta):
 		$min.set_text(str(minutes))
 	else:
 		$min.set_text("0" + str(minutes))
-
+	
+	if minutes==0 and seconds==0:
+		get_tree().change_scene("res://HUD/Game Won.tscn")
 
 
 func _on_Timer_timeout():
 	dsec -= 1
+
 
