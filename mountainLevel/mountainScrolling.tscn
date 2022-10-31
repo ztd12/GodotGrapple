@@ -243,7 +243,7 @@ texture = ExtResource( 4 )
 centered = false
 script = ExtResource( 8 )
 
-[node name="platform1" type="StaticBody2D" parent="c3"]
+[node name="platform1" type="KinematicBody2D" parent="c3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
@@ -256,7 +256,7 @@ texture = ExtResource( 3 )
 position = Vector2( 16.221, 94.6419 )
 shape = SubResource( 3 )
 
-[node name="platform2" type="StaticBody2D" parent="c3"]
+[node name="platform2" type="KinematicBody2D" parent="c3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
@@ -269,7 +269,7 @@ texture = ExtResource( 3 )
 position = Vector2( 39.8, 81.9897 )
 shape = SubResource( 4 )
 
-[node name="platform3" type="StaticBody2D" parent="c3"]
+[node name="platform3" type="KinematicBody2D" parent="c3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
@@ -282,7 +282,7 @@ texture = ExtResource( 3 )
 position = Vector2( 104.642, 73.6826 )
 shape = SubResource( 5 )
 
-[node name="platform4" type="StaticBody2D" parent="c3"]
+[node name="platform4" type="KinematicBody2D" parent="c3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
@@ -323,7 +323,7 @@ texture = ExtResource( 4 )
 centered = false
 script = ExtResource( 8 )
 
-[node name="platform1" type="StaticBody2D" parent="d3"]
+[node name="platform1" type="KinematicBody2D" parent="d3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
@@ -336,7 +336,7 @@ texture = ExtResource( 3 )
 position = Vector2( 60.6281, 161.098 )
 shape = SubResource( 12 )
 
-[node name="platform2" type="StaticBody2D" parent="d3"]
+[node name="platform2" type="KinematicBody2D" parent="d3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
@@ -349,7 +349,7 @@ texture = ExtResource( 3 )
 position = Vector2( 39.6691, 81.9897 )
 shape = SubResource( 13 )
 
-[node name="platform3" type="StaticBody2D" parent="d3"]
+[node name="platform3" type="KinematicBody2D" parent="d3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
@@ -362,7 +362,7 @@ texture = ExtResource( 3 )
 position = Vector2( 117.48, 56.8131 )
 shape = SubResource( 14 )
 
-[node name="platform4" type="StaticBody2D" parent="d3"]
+[node name="platform4" type="KinematicBody2D" parent="d3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
@@ -375,7 +375,7 @@ texture = ExtResource( 3 )
 position = Vector2( 224.24, 39.0488 )
 shape = SubResource( 15 )
 
-[node name="platform5" type="StaticBody2D" parent="d3"]
+[node name="platform5" type="KinematicBody2D" parent="d3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
@@ -416,7 +416,7 @@ texture = ExtResource( 4 )
 centered = false
 script = ExtResource( 8 )
 
-[node name="platform1" type="StaticBody2D" parent="e3"]
+[node name="platform1" type="KinematicBody2D" parent="e3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
@@ -429,7 +429,7 @@ texture = ExtResource( 3 )
 position = Vector2( 86.1942, 160.602 )
 shape = SubResource( 12 )
 
-[node name="platform2" type="StaticBody2D" parent="e3"]
+[node name="platform2" type="KinematicBody2D" parent="e3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
@@ -442,7 +442,7 @@ texture = ExtResource( 3 )
 position = Vector2( 39.6691, 81.9897 )
 shape = SubResource( 13 )
 
-[node name="platform3" type="StaticBody2D" parent="e3"]
+[node name="platform3" type="KinematicBody2D" parent="e3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
@@ -455,7 +455,7 @@ texture = ExtResource( 3 )
 position = Vector2( 117.48, 56.8131 )
 shape = SubResource( 14 )
 
-[node name="platform4" type="StaticBody2D" parent="e3"]
+[node name="platform4" type="KinematicBody2D" parent="e3"]
 position = Vector2( 0, -26.7606 )
 scale = Vector2( 1.42857, 1.40845 )
 
