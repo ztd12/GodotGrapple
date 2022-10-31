@@ -38,7 +38,7 @@ func _process(delta):
 	var count = get_tree().get_nodes_in_group("enemies").size()
 	
 	if count == 0:
-		print("creating 10 enemies")
+		print("creating", num_of_enemies,  "enemies")
 		for i in range(0,num_of_enemies):
 			var enemy = enemyscene.instance()
 			rand.randomize()

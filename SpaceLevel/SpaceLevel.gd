@@ -13,7 +13,6 @@ var num_of_enemies = 6
 func enemyspawner():
 	for i in range(0,num_of_enemies):
 		var enemy = enemyscene.instance()
-		enemy.connect("tree_exited",self,"_on_Enemy_tree_exited")
 		rand.randomize()
 		var x = rand.randf_range(0,screen_size.x)
 		rand.randomize()
@@ -35,10 +34,9 @@ func _process(delta):
 	var count = get_tree().get_nodes_in_group("enemies").size()
 	
 	if count == 0:
-		print("creating 10 enemies")
+		print("creating", num_of_enemies, "enemies")
 		for i in range(0,num_of_enemies):
 			var enemy = enemyscene.instance()
-			enemy.connect("tree_exited",self,"_on_Enemy_tree_exited")
 			rand.randomize()
 			var x = rand.randf_range(0,screen_size.x)
 			rand.randomize()
