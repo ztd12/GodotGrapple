@@ -18,7 +18,7 @@ func enemyspawner():
 	for i in range(0,num_of_enemies):
 		var enemy = enemyscene.instance()
 		rand.randomize()
-		var x = rand.randf_range(0,screen_size.x)
+		var x = rand.randf_range(300,900)
 		rand.randomize()
 		var y = rand.randf_range(0, 300)
 		enemy.position.y = y 
@@ -42,7 +42,7 @@ func _process(delta):
 		for i in range(0,num_of_enemies):
 			var enemy = enemyscene.instance()
 			rand.randomize()
-			var x = rand.randf_range(0,screen_size.x)
+			var x = rand.randf_range(600,1200)#0,screen_size.x)
 			rand.randomize()
 			var y = rand.randf_range(0, 300)
 			enemy.position.y = y 

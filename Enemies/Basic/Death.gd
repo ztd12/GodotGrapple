@@ -24,7 +24,7 @@ func update(delta):
 		animated_sprite.modulate = Color(1,1,1,1)	
 	
 	if animated_sprite.get_frame() == 3:
-		yield(get_tree().create_timer(.3), "timeout")
+		#yield(get_tree().create_timer(.3), "timeout")
 		owner.queue_free() 
 
 func _physics_update(delta):
