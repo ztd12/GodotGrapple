@@ -45,4 +45,8 @@ func _physics_process(_delta: float) -> void:
 		if $Tip.move_and_collide(direction * SPEED):
 			hooked = true	# Got something!
 			flying = false	# Not flying anymore
+			
+			
+	if hooked and not $Tip.move_and_collide(direction*SPEED):
+		release()
 	tip = $Tip.global_position	# set `tip` as starting position for next frame

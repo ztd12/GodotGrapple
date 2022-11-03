@@ -24,7 +24,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 16, 360 )
 
 [node name="Tip" type="KinematicBody2D" parent="."]
-collision_layer = 4
+collision_layer = 128
 
 [node name="Hook" type="Sprite" parent="Tip"]
 texture = ExtResource( 2 )
@@ -36,3 +36,5 @@ shape = SubResource( 1 )
 
 [node name="grappleSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+
+[node name="raycast" type="RayCast2D" parent="."]
