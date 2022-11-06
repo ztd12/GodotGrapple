@@ -50,9 +50,13 @@ func get_input_direction() -> float:
 	
 	if direction < 0:
 		$AnimatedSprite.flip_h = true
+		$Ledge1.rotation_degrees = 90
+		$Ledge2.rotation_degrees = 90
 		hitbox_shape.position.x = -14
 	if direction > 0: 
 		$AnimatedSprite.flip_h = false
+		$Ledge1.rotation_degrees = -90
+		$Ledge2.rotation_degrees = -90
 		hitbox_shape.position.x = 14
 		
 	return direction 
@@ -61,6 +65,12 @@ func on_floor() -> bool:
 	if (ground_ray.is_colliding() or 
 		ground_ray2.is_colliding() or
 		ground_ray3.is_colliding()):
+		return true
+	else:
+		return false
+		
+func on_ledge() -> bool:
+	if (not $Ledge1.is_colliding()) and $Ledge2.is_colliding():
 		return true
 	else:
 		return false

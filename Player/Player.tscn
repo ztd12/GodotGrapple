@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=2]
+[gd_scene load_steps=98 format=2]
 
 [ext_resource path="res://Player/Individual Sprites/adventurer-attack2-03.png" type="Texture" id=1]
 [ext_resource path="res://Player/Individual Sprites/adventurer-hurt-02.png" type="Texture" id=2]
@@ -91,6 +91,7 @@
 [ext_resource path="res://Player/Takehit.gd" type="Script" id=89]
 [ext_resource path="res://Player/slideHitbox.gd" type="Script" id=90]
 [ext_resource path="res://Player/player_injured.mp3" type="AudioStream" id=91]
+[ext_resource path="res://Player/Ledge.gd" type="Script" id=92]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 10, 22 )
@@ -208,9 +209,21 @@ shape = SubResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 1.5, 1.50676 )
 frames = SubResource( 1 )
-animation = "hurt"
-frame = 3
+animation = "crnr_grb"
+frame = 1
 playing = true
+
+[node name="Ledge1" type="RayCast2D" parent="."]
+position = Vector2( 0, -30 )
+rotation = -1.5708
+enabled = true
+cast_to = Vector2( 0, 20 )
+
+[node name="Ledge2" type="RayCast2D" parent="."]
+position = Vector2( 0, -20 )
+rotation = -1.5708
+enabled = true
+cast_to = Vector2( 0, 20 )
 
 [node name="ground_check_ray" type="RayCast2D" parent="."]
 enabled = true
@@ -331,6 +344,11 @@ volume_db = 1.238
 [node name="Takehit" type="Node" parent="StateMachine"]
 script = ExtResource( 89 )
 _animation = NodePath("../../AnimatedSprite")
+
+[node name="Ledge" type="Node" parent="StateMachine"]
+script = ExtResource( 92 )
+_animation = NodePath("../../AnimatedSprite")
+_hk = NodePath("../../GrappleHook")
 
 [node name="AttackTimer" type="Timer" parent="."]
 process_mode = 0

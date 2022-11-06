@@ -41,6 +41,9 @@ func physics_update(delta: float) -> void:
 	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)
 	
 	
+	if player.on_ledge():
+		grppl.release()
+		state_machine.transition_to("Ledge")
 	
 	if Input.is_action_just_released("grapple"):
 		grppl.release()

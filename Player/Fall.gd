@@ -39,6 +39,9 @@ func physics_update(delta: float) -> void:
 		# We clicked the mouse -> shoot
 		grppl.shoot(player.get_local_mouse_position())
 		state_machine.transition_to("Hook")
+		
+	if player.on_ledge():
+		state_machine.transition_to("Ledge")
 
 	if player.is_on_floor():
 		if is_zero_approx(player.get_input_direction()):
