@@ -7,11 +7,11 @@ func enter(msg := {}) -> void:
 	if msg.has("falling_death"):
 		$falloff.play()
 		yield($falloff, "finished")	
-		get_tree().change_scene("res://HUD/Level Menu.tscn")
+		get_tree().change_scene("res://HUD/Game Over.tscn")
 	else:
 		animated_sprite.play("die")
 		yield(animated_sprite, "animation_finished")	
-		get_tree().change_scene("res://HUD/Level Menu.tscn")
+		get_tree().change_scene("res://HUD/Game Over.tscn")
 		
 func update(delta):
 	if animated_sprite.get_frame() == 0:
