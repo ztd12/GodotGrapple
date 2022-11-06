@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/boss_audio_mountain.mp3-9ea1d66984fe6692c37258d3b3d915d4.mp3str"
+
+[deps]
+
+source_file="res://mountainLevel/boss_audio_mountain.mp3"
+dest_files=[ "res://.import/boss_audio_mountain.mp3-9ea1d66984fe6692c37258d3b3d915d4.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

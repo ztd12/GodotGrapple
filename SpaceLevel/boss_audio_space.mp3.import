@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/boss_audio_space.mp3-4d63fe4f94a959b33c5c2659da1c7176.mp3str"
+
+[deps]
+
+source_file="res://SpaceLevel/boss_audio_space.mp3"
+dest_files=[ "res://.import/boss_audio_space.mp3-4d63fe4f94a959b33c5c2659da1c7176.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/forest_bigboss_audio.mp3-3b0e04c6faee3818f00a804baae81acd.mp3str"
+
+[deps]
+
+source_file="res://ForestLevel/art/forest_bigboss_audio.mp3"
+dest_files=[ "res://.import/forest_bigboss_audio.mp3-3b0e04c6faee3818f00a804baae81acd.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
