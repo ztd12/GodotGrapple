@@ -21,11 +21,13 @@ func physics_update(delta: float) -> void:
 		state_machine.transition_to("Fall")
 		return 
 		
-	if not player.on_ledge():
-		state_machine.transition_to("Fall")
+	#if not player.on_ledge():
+	#	state_machine.transition_to("Fall")
 	
 	
 	player.velocity.x = 0
+	if animated_sprite.flip_h == true:
+		player.velocity.x = -500
 	player.velocity.y = 0
 	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)
 	
