@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://HUD/pause button.png" type="Texture" id=1]
 [ext_resource path="res://ForestLevel/Scripts/Background 1.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://ForestLevel/Scenes/ForestLevel.gd" type="Script" id=7]
 [ext_resource path="res://unfilledhearts.tscn" type="PackedScene" id=8]
 [ext_resource path="res://hearts.tscn" type="PackedScene" id=9]
+[ext_resource path="res://ForestLevel/art/sky1.png" type="Texture" id=10]
 [ext_resource path="res://ForestLevel/Scenes/Countdown Timer.gd" type="Script" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -110,6 +111,12 @@ texture = ExtResource( 6 )
 position = Vector2( 1187, 528.75 )
 shape = SubResource( 5 )
 
+[node name="Sky1" type="Sprite" parent="Background 1"]
+position = Vector2( 962.857, 281.69 )
+scale = Vector2( 0.998512, 0.651408 )
+z_index = -1
+texture = ExtResource( 10 )
+
 [node name="Background 2" type="Sprite" parent="."]
 position = Vector2( 1344, 19 )
 scale = Vector2( 0.7, 0.71 )
@@ -168,6 +175,12 @@ texture = ExtResource( 6 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 2/StaticBody2D10"]
 position = Vector2( 2599, 366.5 )
 shape = SubResource( 8 )
+
+[node name="Sky2" type="Sprite" parent="Background 2"]
+position = Vector2( 960, 283.099 )
+scale = Vector2( 0.998512, 0.651408 )
+z_index = -1
+texture = ExtResource( 10 )
 
 [node name="Background 5" type="Sprite" parent="."]
 position = Vector2( 5375, 19 )
@@ -228,6 +241,12 @@ texture = ExtResource( 6 )
 position = Vector2( 2599, 366.5 )
 shape = SubResource( 8 )
 
+[node name="Sky4" type="Sprite" parent="Background 5"]
+position = Vector2( 952.857, 284.507 )
+scale = Vector2( 0.998512, 0.651408 )
+z_index = -1
+texture = ExtResource( 10 )
+
 [node name="Background 3" type="Sprite" parent="."]
 position = Vector2( 2688, 19 )
 scale = Vector2( 0.7, 0.71 )
@@ -287,8 +306,14 @@ texture = ExtResource( 6 )
 position = Vector2( 2597.25, 367.25 )
 shape = SubResource( 8 )
 
+[node name="Sky3" type="Sprite" parent="Background 3"]
+position = Vector2( 957.144, 283.099 )
+scale = Vector2( 0.998512, 0.651408 )
+z_index = -1
+texture = ExtResource( 10 )
+
 [node name="Background 6" type="Sprite" parent="."]
-position = Vector2( 6720, 19 )
+position = Vector2( 6719, 19 )
 scale = Vector2( 0.7, 0.71 )
 texture = ExtResource( 4 )
 centered = false
@@ -345,6 +370,12 @@ texture = ExtResource( 6 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 6/StaticBody2D10"]
 position = Vector2( 2597.25, 367.25 )
 shape = SubResource( 8 )
+
+[node name="Sky5" type="Sprite" parent="Background 6"]
+position = Vector2( 950, 284.507 )
+scale = Vector2( 0.998512, 0.651408 )
+z_index = -1
+texture = ExtResource( 10 )
 
 [node name="Background 4" type="Sprite" parent="."]
 position = Vector2( 4032, 19 )
@@ -404,6 +435,12 @@ texture = ExtResource( 6 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background 4/StaticBody2D10"]
 position = Vector2( 2597.25, 367.25 )
 shape = SubResource( 8 )
+
+[node name="Sky5" type="Sprite" parent="Background 4"]
+position = Vector2( 954.285, 284.507 )
+scale = Vector2( 0.998512, 0.651408 )
+z_index = -1
+texture = ExtResource( 10 )
 
 [node name="Background music" type="AudioStreamPlayer" parent="."]
 pause_mode = 2
