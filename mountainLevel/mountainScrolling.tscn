@@ -6,7 +6,7 @@
 [ext_resource path="res://mountainLevel/Glacial-mountains-parallax-background_vnitti/Layers/clouds_mg_2.png" type="Texture" id=4]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://mountainLevel/Glacial-mountains-parallax-background_vnitti/Layers/sky_lightened.png" type="Texture" id=6]
-[ext_resource path="res://mountainLevel/boss_audio_mountain.wav" type="AudioStream" id=7]
+[ext_resource path="res://mountainLevel/mountain_level_music.wav" type="AudioStream" id=7]
 [ext_resource path="res://mountainLevel/Sprite.gd" type="Script" id=8]
 [ext_resource path="res://mountainLevel/Mountain Level.gd" type="Script" id=9]
 [ext_resource path="res://HUD/pause button.png" type="Texture" id=10]
