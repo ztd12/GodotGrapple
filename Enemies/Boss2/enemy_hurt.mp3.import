@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/enemy_hurt.mp3-0e0d0a4e888b2cd2b22e0f0c7f1fc7c7.mp3str"
+
+[deps]
+
+source_file="res://Enemies/Boss2/enemy_hurt.mp3"
+dest_files=[ "res://.import/enemy_hurt.mp3-0e0d0a4e888b2cd2b22e0f0c7f1fc7c7.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

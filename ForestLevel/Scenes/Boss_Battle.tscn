@@ -5,7 +5,7 @@
 [ext_resource path="res://ForestLevel/art/forestlevelplatform.png" type="Texture" id=3]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://SpaceLevel/boss_audio_space.wav" type="AudioStream" id=5]
-[ext_resource path="res://Enemies/Boss 1/Boss1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Enemies/Boss/Boss1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://ForestLevel/Scenes/Boss_Battle.gd" type="Script" id=7]
 [ext_resource path="res://hearts.tscn" type="PackedScene" id=8]
 [ext_resource path="res://unfilledhearts.tscn" type="PackedScene" id=9]

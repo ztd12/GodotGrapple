@@ -9,7 +9,7 @@ var speed = -1
 
 func lose_life():
 	lives -= 1
-	hud.load_hearts()
+	#hud.load_hearts()
 	
 	if lives <= 0:
 	#	hud.load_hearts() # why does the extra heart appear?
