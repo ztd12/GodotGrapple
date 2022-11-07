@@ -13,6 +13,6 @@ func enter(msg := {}) -> void:
 		yield(animated_sprite, "animation_finished")	
 		get_tree().change_scene("res://HUD/Game Over.tscn")
 		
-func update(delta):
+func update(_delta):
 	if animated_sprite.get_frame() == 0:
 		animated_sprite.modulate = Color(100,1,1,1)	

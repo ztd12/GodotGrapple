@@ -9,14 +9,14 @@ onready var hitbox: Area2D = get_node(_hitbox)
 func enter(_msg := {}) -> void:
 	animated_sprite.play("attack")
 	
-func update(delta):
+func update(_delta):
 	if animated_sprite.get_frame() == 3:
 		animated_sprite.modulate = Color(100,1,1,50)
 		yield(get_tree().create_timer(.3), "timeout")
 	if animated_sprite.get_frame() > 4:
 		animated_sprite.modulate = Color(1,1,1,1)		
 	
-func physics_update(delta: float) -> void:
+func physics_update(_delta: float) -> void:
 	if owner.taking_damage:
 		animated_sprite.modulate = Color(1,1,1,1)
 		state_machine.transition_to("Takehit")
@@ -32,12 +32,12 @@ func physics_update(delta: float) -> void:
 		animated_sprite.modulate = Color(1,1,1,1)
 		state_machine.transition_to("Idle")
 	
-	if owner.detected_player == true and owner.distance_to_player >= 55:
+	if owner.detected_player == true and owner.distance_to_player >= 200:
 		hitbox.monitorable = false
 		animated_sprite.modulate = Color(1,1,1,1)
 		state_machine.transition_to("Run")
 		
-	if not owner.is_on_floor():
+	if not owner.on_floor():
 		hitbox.monitorable = false
 		animated_sprite.modulate = Color(1,1,1,1)
 		state_machine.transition_to("Fall")

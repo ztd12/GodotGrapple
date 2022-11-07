@@ -11,7 +11,7 @@ var air_friction = 10
 var slide_speed = 500
 var dodge_speed = 400
 
-var knockback_force = 20
+var knockback_force = 40
 var threat_position = 0
 
 var health = 3
@@ -36,7 +36,7 @@ onready var ground_ray3 = get_node("ground_check_ray3")
 export(NodePath) var _hitbox_collision_shape
 onready var hitbox_shape: CollisionShape2D = get_node(_hitbox_collision_shape)
 
-func _process(delta):
+func _process(_delta):
 	if self.position.x < 0:
 		dead = true
 

@@ -10,7 +10,7 @@ onready var grppl: Node2D = get_node(_hk)
 func enter(_msg := {}) -> void:
 	animated_sprite.play("crnr_grb")
 
-func physics_update(delta: float) -> void:
+func physics_update(_delta: float) -> void:
 	
 	if owner.taking_damage:
 		state_machine.transition_to("Takehit")

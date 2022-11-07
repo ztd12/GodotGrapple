@@ -9,12 +9,14 @@ var enemyscene = load("res://Enemies/Basic/BasicEnemy.tscn")
 onready var screen_size = get_viewport().get_visible_rect().size
 
 var num_of_enemies = 6
+onready var startrange = screen_size.x
+onready var endrange  = startrange*2
 
 func enemyspawner():
 	for i in range(0,num_of_enemies):
 		var enemy = enemyscene.instance()
 		rand.randomize()
-		var x = rand.randf_range(0,screen_size.x)
+		var x = rand.randf_range(startrange,endrange)
 		rand.randomize()
 		var y = rand.randf_range(0, 300)
 		enemy.position.y = y 
@@ -38,7 +40,7 @@ func _process(delta):
 		for i in range(0,num_of_enemies):
 			var enemy = enemyscene.instance()
 			rand.randomize()
-			var x = rand.randf_range(0,screen_size.x)
+			var x = rand.randf_range(startrange,endrange)
 			rand.randomize()
 			var y = rand.randf_range(0, 300)
 			enemy.position.y = y 

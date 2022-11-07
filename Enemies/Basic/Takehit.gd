@@ -12,6 +12,9 @@ func physics_update(delta: float) -> void:
 	if owner.taking_damage:
 		state_machine.transition_to("Takehit")
 		
+	if owner.dead:
+		state_machine.transition_to("Death")
+		
 	if owner.position.x <= owner.threat_position:	
 		owner.velocity.x = owner.velocity.x - owner.knockback_x#lerp(owner.velocity.x, owner.velocity.x-owner.knockback_x, 0.2)
 	elif owner.position.x >= owner.threat_position:
