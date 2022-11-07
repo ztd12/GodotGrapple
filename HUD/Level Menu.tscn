@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://HUD/Level Menu.gd" type="Script" id=1]
 [ext_resource path="res://HUD/mainFont25.tres" type="DynamicFont" id=2]
@@ -7,6 +7,9 @@
 
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.0352941, 0.333333, 0.184314, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.0196078, 0.231373, 0.12549, 1 )
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.705882, 0.776471, 0.745098, 1 )
@@ -19,6 +22,9 @@ border_color = Color( 0.0352941, 0.333333, 0.184314, 1 )
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.0352941, 0.333333, 0.184314, 1 )
 
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.0196078, 0.231373, 0.12549, 1 )
+
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.705882, 0.776471, 0.745098, 1 )
 border_width_left = 4
@@ -30,6 +36,9 @@ border_color = Color( 0.0352941, 0.333333, 0.184314, 1 )
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.0352941, 0.333333, 0.184314, 1 )
 
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.0196078, 0.231373, 0.12549, 1 )
+
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.705882, 0.776471, 0.745098, 1 )
 border_width_left = 4
@@ -40,6 +49,9 @@ border_color = Color( 0.0352941, 0.333333, 0.184314, 1 )
 
 [sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.0352941, 0.333333, 0.184314, 1 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.0196078, 0.231373, 0.12549, 1 )
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.705882, 0.776471, 0.745098, 1 )
@@ -75,6 +87,7 @@ margin_bottom = 42.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 2 )
 custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 9 )
 custom_styles/normal = SubResource( 1 )
 text = "Level 1"
 
@@ -85,6 +98,7 @@ margin_bottom = 88.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 2 )
 custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 10 )
 custom_styles/normal = SubResource( 2 )
 text = "Level 2"
 
@@ -95,6 +109,7 @@ margin_bottom = 134.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 2 )
 custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 11 )
 custom_styles/normal = SubResource( 3 )
 text = "Level 3"
 
@@ -108,6 +123,7 @@ custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 3 )
 custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 12 )
 custom_styles/normal = SubResource( 4 )
 text = "Back to Home"
 
