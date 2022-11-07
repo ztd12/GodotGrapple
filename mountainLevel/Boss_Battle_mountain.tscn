@@ -7,7 +7,7 @@
 [ext_resource path="res://mountainLevel/new_platform.png" type="Texture" id=5]
 [ext_resource path="res://Enemies/Basic/BasicEnemy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=7]
-[ext_resource path="res://mountainLevel/boss_audio_mountain.mp3" type="AudioStream" id=8]
+[ext_resource path="res://mountainLevel/boss_audio_mountain.wav" type="AudioStream" id=8]
 [ext_resource path="res://hearts.tscn" type="PackedScene" id=9]
 [ext_resource path="res://unfilledhearts.tscn" type="PackedScene" id=10]
 
