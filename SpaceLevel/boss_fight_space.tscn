@@ -6,7 +6,7 @@
 [ext_resource path="res://SpaceLevel/parallax-space-ring-planet.png" type="Texture" id=4]
 [ext_resource path="res://SpaceLevel/space platform.png" type="Texture" id=5]
 [ext_resource path="res://SpaceLevel/parallax-space-backgound.png" type="Texture" id=6]
-[ext_resource path="res://SpaceLevel/boss_audio_space.mp3" type="AudioStream" id=7]
+[ext_resource path="res://SpaceLevel/boss_audio_space.wav" type="AudioStream" id=7]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Enemies/Basic/BasicEnemy.tscn" type="PackedScene" id=9]
 [ext_resource path="res://unfilledhearts.tscn" type="PackedScene" id=10]
