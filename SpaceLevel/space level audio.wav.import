@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/space level audio.wav-7ae3f102fde74c9cdc1bf9ba2228f68e.sample"
+
+[deps]
+
+source_file="res://SpaceLevel/space level audio.wav"
+dest_files=[ "res://.import/space level audio.wav-7ae3f102fde74c9cdc1bf9ba2228f68e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
