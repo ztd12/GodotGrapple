@@ -10,7 +10,7 @@ func _ready():
 	for ray in rays:
 		ray.add_exception(_enemy)
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	detect_player_position()
 	#print(owner.detected_player, owner.player_position, owner.distance_to_player)
 	

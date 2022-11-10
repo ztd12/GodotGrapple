@@ -4,7 +4,7 @@ extends RayCast2D
 func _ready():
 	pass
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	detect_player_position2()
 
 func detect_player_position2():

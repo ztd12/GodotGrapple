@@ -8,7 +8,7 @@ onready var animated_sprite: AnimatedSprite = get_node(_animation)
 func enter(_msg := {}) -> void:
 	animated_sprite.play("takehit")
 
-func physics_update(delta: float) -> void:
+func physics_update(_delta: float) -> void:
 	if owner.taking_damage:
 		state_machine.transition_to("Takehit")
 		

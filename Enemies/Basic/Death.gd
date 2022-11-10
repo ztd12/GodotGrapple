@@ -17,7 +17,7 @@ func enter(msg := {}) -> void:
 	animated_sprite.play("death")
 
 
-func update(delta):
+func update(_delta):
 	if animated_sprite.get_frame() == 0:
 		animated_sprite.modulate = Color(10,10,10,10)
 	if animated_sprite.get_frame() == 2:
