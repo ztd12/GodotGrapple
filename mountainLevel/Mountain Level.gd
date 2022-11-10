@@ -13,7 +13,7 @@ onready var startrange = screen_size.x
 onready var endrange  = startrange*2
 
 func enemyspawner():
-	for i in range(0,num_of_enemies):
+	for _i in range(0,num_of_enemies):
 		var enemy = enemyscene.instance()
 		rand.randomize()
 		var x = rand.randf_range(startrange,endrange)
@@ -31,13 +31,13 @@ func _ready():
 	Global.hud = self
 	enemyspawner()
 
-func _process(delta):
+func _process(_delta):
 	
 	var count = get_tree().get_nodes_in_group("enemies").size()
 	
 	if count == 0:
 		print("creating", num_of_enemies, "enemies")
-		for i in range(0,num_of_enemies):
+		for _i in range(0,num_of_enemies):
 			var enemy = enemyscene.instance()
 			rand.randomize()
 			var x = rand.randf_range(startrange,endrange)
@@ -50,6 +50,7 @@ func _process(delta):
 
 func _on_Quit_pressed():
 	get_tree().paused = false
+# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://HUD/Level Menu.tscn")
 
 

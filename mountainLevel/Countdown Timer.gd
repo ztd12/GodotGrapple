@@ -7,7 +7,7 @@ var dsec = 0
 
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if seconds  > 0 and dsec <= 0:
 		seconds -= 1
 		dsec = 10
@@ -32,6 +32,7 @@ func _physics_process(delta):
 		$min.set_text("0" + str(minutes))
 	
 	if minutes==0 and seconds==0:
+# warning-ignore:return_value_discarded
 		get_tree().change_scene("res://mountainLevel/Boss_Battle_mountain.tscn")
 
 

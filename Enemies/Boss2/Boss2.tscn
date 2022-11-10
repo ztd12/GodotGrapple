@@ -247,6 +247,7 @@ shape = SubResource( 1 )
 [node name="Vision" type="Node2D" parent="."]
 rotation = 2.61799
 script = ExtResource( 10 )
+_enemyNode = NodePath("..")
 
 [node name="Ray100" type="RayCast2D" parent="Vision"]
 rotation = 1.74533
