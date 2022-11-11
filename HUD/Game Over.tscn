@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://HUD/mainFont50.tres" type="DynamicFont" id=1]
+[ext_resource path="res://HUD/game_over-removebg.png" type="Texture" id=1]
 [ext_resource path="res://HUD/Game Over.gd" type="Script" id=2]
 
 [node name="Control" type="Control"]
@@ -11,24 +11,15 @@ script = ExtResource( 2 )
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1030.0
 margin_bottom = 597.0
-color = Color( 0.25098, 0.368627, 0.203922, 1 )
-
-[node name="Label" type="Label" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -396.0
-margin_top = -74.5
-margin_right = 396.0
-margin_bottom = 74.5
-custom_fonts/font = ExtResource( 1 )
-text = "GAME OVER
-Try Again"
-align = 1
+color = Color( 0.878431, 0.207843, 0, 1 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
+
+[node name="game over text" type="Sprite" parent="."]
+position = Vector2( 513, 296 )
+scale = Vector2( 1.17362, 1.23101 )
+texture = ExtResource( 1 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
