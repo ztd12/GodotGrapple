@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://HUD/pause button.png" type="Texture" id=1]
 [ext_resource path="res://ForestLevel/Scripts/Background 1.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://unfilledhearts.tscn" type="PackedScene" id=8]
 [ext_resource path="res://hearts.tscn" type="PackedScene" id=9]
 [ext_resource path="res://ForestLevel/art/sky1.png" type="Texture" id=10]
+[ext_resource path="res://HUD/mainFont50.tres" type="DynamicFont" id=11]
 [ext_resource path="res://ForestLevel/Scenes/Countdown Timer.gd" type="Script" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -464,32 +465,47 @@ __meta__ = {
 }
 
 [node name="Resume" type="Button" parent="Pause_Menu/Pause Menu"]
+anchor_left = -0.0662768
+anchor_top = -0.0586265
+anchor_right = 0.121832
+anchor_bottom = 0.078727
 margin_left = 480.0
 margin_top = 184.0
-margin_right = 544.0
-margin_bottom = 204.0
+margin_right = 537.0
+margin_bottom = 202.0
+custom_fonts/font = ExtResource( 11 )
 text = "Resume"
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [node name="Mute" type="Button" parent="Pause_Menu/Pause Menu"]
+anchor_left = -0.0818713
+anchor_top = -0.376884
+anchor_right = 0.12768
+anchor_bottom = -0.236181
 margin_left = 496.0
 margin_top = 493.0
-margin_right = 541.0
-margin_bottom = 513.0
+margin_right = 531.0
+margin_bottom = 509.0
 grow_horizontal = 2
 grow_vertical = 2
+custom_fonts/font = ExtResource( 11 )
 text = "Mute"
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [node name="Quit" type="Button" parent="Pause_Menu/Pause Menu"]
+anchor_left = -0.0808967
+anchor_top = 0.0720268
+anchor_right = 0.12963
+anchor_bottom = 0.211055
 margin_left = 496.0
 margin_top = 344.0
-margin_right = 536.0
-margin_bottom = 364.0
+margin_right = 530.0
+margin_bottom = 361.0
+custom_fonts/font = ExtResource( 11 )
 text = "Quit"
 __meta__ = {
 "_edit_use_anchors_": true
