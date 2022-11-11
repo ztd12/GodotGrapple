@@ -8,7 +8,7 @@
 [ext_resource path="res://HUD/mainFont25.tres" type="DynamicFont" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 518, 28.125 )
+extents = Vector2( 243, 29.0625 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 24, 258.5 )
@@ -25,12 +25,23 @@ color = Color( 0.25098, 0.368627, 0.203922, 1 )
 [node name="StaticBody2D" type="StaticBody2D" parent="ColorRect"]
 
 [node name="Sprite" type="Sprite" parent="ColorRect/StaticBody2D"]
-position = Vector2( 514.5, 480 )
-scale = Vector2( 3.56597, 1.00373 )
+position = Vector2( 243, 480.188 )
+scale = Vector2( 1.68055, 1.00933 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect/StaticBody2D"]
-position = Vector2( 515, 474 )
+position = Vector2( 240, 474.938 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="ColorRect"]
+
+[node name="Sprite" type="Sprite" parent="ColorRect/StaticBody2D4"]
+position = Vector2( 756, 485 )
+scale = Vector2( 1.68055, 1.00933 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect/StaticBody2D4"]
+position = Vector2( 752, 476 )
 shape = SubResource( 1 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="ColorRect"]
