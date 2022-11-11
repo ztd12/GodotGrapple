@@ -57,7 +57,7 @@ margin_top = 89.0
 margin_right = 521.0
 margin_bottom = 493.0
 custom_fonts/font = ExtResource( 4 )
-text = "Battle enemies throughout levels.
+text = "Battle enemies to stay alive until timer runs out.
 Defeat big boss at the end of the level.
 Use the grapple feature and jumping to move between platforms and avoid falling.
 Use attack  or slide to kill enemies.
