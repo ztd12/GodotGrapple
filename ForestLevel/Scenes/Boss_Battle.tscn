@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Enemies/Basic/BasicEnemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ForestLevel/art/bg1.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://ForestLevel/art/boss_audio_forest.wav" type="AudioStream" id=5]
 [ext_resource path="res://Enemies/Boss/Boss1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://ForestLevel/Scenes/Boss_Battle.gd" type="Script" id=7]
 [ext_resource path="res://hearts.tscn" type="PackedScene" id=8]
 [ext_resource path="res://unfilledhearts.tscn" type="PackedScene" id=9]
 [ext_resource path="res://ForestLevel/art/sky1.png" type="Texture" id=10]
@@ -20,6 +21,7 @@ extents = Vector2( 143.615, 27.8673 )
 extents = Vector2( 748.332, 33.3394 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 7 )
 
 [node name="Sky1" type="Sprite" parent="."]
 position = Vector2( 519, 297.75 )

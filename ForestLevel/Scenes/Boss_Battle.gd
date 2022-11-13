@@ -8,9 +8,9 @@ func _ready():
 	
 	
 
-func _on_Boss_tree_exited():
-	yield(get_tree().create_timer(3), "timeout")
-	get_tree().change_scene("res://HUD/Game Won.tscn")
+#func _on_Boss_tree_exited():
+	#yield(get_tree().create_timer(3), "timeout")
+	#get_tree().change_scene("res://HUD/Game Won.tscn")
 
 func load_hearts():
 	$hearts.rect_size.x = Global.lives * 600
