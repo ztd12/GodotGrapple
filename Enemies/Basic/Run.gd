@@ -35,7 +35,7 @@ func physics_update(delta: float) -> void:
 	
 	owner.set_direction()
 	
-	if owner.distance_to_player < 55:
+	if owner.distance_to_player < 75:
 		
 		state_machine.transition_to("Attack")
 	

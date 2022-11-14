@@ -32,7 +32,7 @@ func physics_update(_delta: float) -> void:
 		animated_sprite.modulate = Color(1,1,1,1)
 		state_machine.transition_to("Idle")
 	
-	if owner.detected_player == true and owner.distance_to_player >= 55:
+	if owner.detected_player == true and owner.distance_to_player >= 75:
 		hitbox.monitorable = false
 		animated_sprite.modulate = Color(1,1,1,1)
 		state_machine.transition_to("Run")

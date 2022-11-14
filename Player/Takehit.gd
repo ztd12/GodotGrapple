@@ -4,11 +4,7 @@ extends PlayerState
 export(NodePath) var _animation
 onready var animated_sprite: AnimatedSprite = get_node(_animation)
 
-export(NodePath) var timer
-onready var hit_timer = get_node(timer)
-
 func enter(_msg := {}) -> void:
-	hit_timer.start()
 	animated_sprite.play("hurt")
 	animated_sprite.modulate = Color(100,1,1,1)
 	

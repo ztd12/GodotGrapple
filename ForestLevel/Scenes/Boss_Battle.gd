@@ -5,12 +5,8 @@ func _ready():
 	Global.lives = Global.max_lives
 	load_hearts()
 	Global.hud = self
-	
-	
 
 #func _on_Boss_tree_exited():
-
-
 
 func load_hearts():
 	$hearts.rect_size.x = Global.lives * 600
