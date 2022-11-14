@@ -7,25 +7,13 @@ onready var animated_sprite: AnimatedSprite = get_node(_animation)
 export(NodePath) var timer
 onready var hit_timer = get_node(timer)
 
-var stop = false
-
 func enter(_msg := {}) -> void:
 	hit_timer.start()
 	animated_sprite.play("hurt")
 	animated_sprite.modulate = Color(100,1,1,1)
 	
-func _update():
-	if hit_timer.is_stopped():
-		stop = true
-
-		
 func physics_update(_delta: float) -> void:
-	#if stop: 
-	#	player.taking_damage = false
-	#	animated_sprite.modulate = Color(1,1,1,1)
-	#	state_machine.transition_to("Idle")
-	#print(hit_timer.get_time_left())
-	#
+
 	if animated_sprite.get_frame() == 3:
 		player.taking_damage = false
 		animated_sprite.modulate = Color(1,1,1,1)
@@ -35,7 +23,6 @@ func physics_update(_delta: float) -> void:
 		player.taking_damage = false
 		animated_sprite.modulate = Color(1,1,1,1)
 		state_machine.transition_to("Dead")
-		
 	
 	if player.position.x < player.threat_position:	
 		player.velocity.x = player.velocity.x-(player.knockback_force*4.8) #lerp(player.velocity.x, player.velocity.x-(player.knockback_force*3.8), 0.2)
