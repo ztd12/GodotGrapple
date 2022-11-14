@@ -7,23 +7,29 @@ onready var animated_sprite: AnimatedSprite = get_node(_animation)
 export(NodePath) var timer
 onready var hit_timer = get_node(timer)
 
+var stop = false
+
 func enter(_msg := {}) -> void:
+	hit_timer.start()
 	animated_sprite.play("hurt")
 	animated_sprite.modulate = Color(100,1,1,1)
+	
+func _update():
+	if hit_timer.is_stopped():
+		stop = true
+
 		
 func physics_update(_delta: float) -> void:
-	
-	print(hit_timer.get_time_left())
-	
-	if hit_timer.is_stopped():
-		player.taking_damage = false
-		animated_sprite.modulate = Color(1,1,1,1)
-		state_machine.transition_to("Idle")
-	
-	#if animated_sprite.get_frame() == 3:
+	#if stop: 
 	#	player.taking_damage = false
 	#	animated_sprite.modulate = Color(1,1,1,1)
 	#	state_machine.transition_to("Idle")
+	#print(hit_timer.get_time_left())
+	#
+	if animated_sprite.get_frame() == 3:
+		player.taking_damage = false
+		animated_sprite.modulate = Color(1,1,1,1)
+		state_machine.transition_to("Idle")
 	
 	if player.dead:
 		player.taking_damage = false

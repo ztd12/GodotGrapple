@@ -162,3 +162,5 @@ position = Vector2( 712, 30 )
 
 [node name="Bossman" parent="." instance=ExtResource( 12 )]
 position = Vector2( 555, 318 )
+
+[connection signal="child_exiting_tree" from="." to="." method="_on_Node2D_child_exiting_tree"]

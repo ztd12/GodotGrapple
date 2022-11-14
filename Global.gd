@@ -9,6 +9,7 @@ var speed = -1
 
 func lose_life():
 	lives -= 1
+	
 	hud.load_hearts()
 	
 	if lives <= 0:
