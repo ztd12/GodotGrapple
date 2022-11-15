@@ -355,10 +355,6 @@ process_mode = 0
 wait_time = 0.25
 one_shot = true
 
-[node name="TakehitTimer" type="Timer" parent="."]
-wait_time = 0.08
-one_shot = true
-
 [node name="injured_audio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 91 )
 volume_db = 1.2

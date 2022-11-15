@@ -18,6 +18,7 @@ var health = 3
 
 
 var  taking_damage = false
+var hit_counter = 0
 
 var dead = false
 
@@ -84,6 +85,7 @@ func _on_PlayerHurtbox_area_entered(hitbox):
 		self.health -= hitbox.damage
 		self.dead = health < 1
 		self.taking_damage = true
+		self.hit_counter += 1
 		print(hitbox.get_parent().name + " dealing " + str(hitbox.damage) + " to " + name, health, dead)
 		
 		Global.lose_life()

@@ -5,19 +5,23 @@ export(NodePath) var _animation
 onready var animated_sprite: AnimatedSprite = get_node(_animation)
 
 func enter(_msg := {}) -> void:
+	print(player.hit_counter)
 	animated_sprite.play("hurt")
 	animated_sprite.modulate = Color(100,1,1,1)
+	
+func setup_exit():
+	player.taking_damage = false
+	player.hit_counter = 0
+	animated_sprite.modulate = Color(1,1,1,1)	
 	
 func physics_update(_delta: float) -> void:
 
 	if animated_sprite.get_frame() == 3:
-		player.taking_damage = false
-		animated_sprite.modulate = Color(1,1,1,1)
+		setup_exit()
 		state_machine.transition_to("Idle")
 	
 	if player.dead:
-		player.taking_damage = false
-		animated_sprite.modulate = Color(1,1,1,1)
+		setup_exit()
 		state_machine.transition_to("Dead")
 	
 	if player.position.x < player.threat_position:	
@@ -28,9 +32,7 @@ func physics_update(_delta: float) -> void:
 	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)	
 	
 	if Input.is_action_just_pressed("dodge"):
-		player.taking_damage = false
-		animated_sprite.modulate = Color(1,1,1,1)
+		setup_exit()
 		state_machine.transition_to("Dodge")
 	
-
 

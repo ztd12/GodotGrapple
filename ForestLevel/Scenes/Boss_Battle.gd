@@ -15,7 +15,6 @@ func load_hearts():
 
 
 func _on_Node2D_child_exiting_tree(node):
-	print(node.name)
 	if node.name == "Boss" or node.name == "Bossman":
 		yield(get_tree().create_timer(3), "timeout")
 # warning-ignore:return_value_discarded
