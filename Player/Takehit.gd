@@ -18,8 +18,8 @@ func physics_update(_delta: float) -> void:
 	
 	if player.hit_counter > 1: #test, might remove this if it doesnt fix bug
 		print("YOU HAVE BEEN HIT MORE THAN ONCE VERY FAST")
-		setup_exit()
-		state_machine.transition_to("Idle")
+		#setup_exit()
+		#state_machine.transition_to("Idle")
 
 	if animated_sprite.get_frame() == 3:
 		setup_exit()
