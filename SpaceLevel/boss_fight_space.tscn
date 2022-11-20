@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://SpaceLevel/parallax-space-far-planets.png" type="Texture" id=1]
 [ext_resource path="res://SpaceLevel/parallax-space-big-planet.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://hearts.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Enemies/Boss2/Boss2.tscn" type="PackedScene" id=12]
 [ext_resource path="res://ForestLevel/Scenes/Boss_Battle.gd" type="Script" id=13]
+[ext_resource path="res://HUD/mainFont25.tres" type="DynamicFont" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32.6083, 4.96666 )
@@ -151,5 +152,13 @@ position = Vector2( 712, 30 )
 
 [node name="Bossman" parent="." instance=ExtResource( 12 )]
 position = Vector2( 555, 318 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 546.0
+margin_top = 11.0
+margin_right = 1116.0
+margin_bottom = 45.0
+custom_fonts/font = ExtResource( 14 )
+text = "Defeat the big boss to beat the level!"
 
 [connection signal="child_exiting_tree" from="." to="." method="_on_Node2D_child_exiting_tree"]

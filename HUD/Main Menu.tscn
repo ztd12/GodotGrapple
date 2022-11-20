@@ -1,11 +1,10 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://HUD/Main Menu.gd" type="Script" id=1]
 [ext_resource path="res://HUD/fonts/Gugi-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://HUD/TutorialButton.gd" type="Script" id=3]
 [ext_resource path="res://HUD/mainFont50.tres" type="DynamicFont" id=4]
 [ext_resource path="res://HUD/background0.png" type="Texture" id=5]
-[ext_resource path="res://HUD/audio/home_audio.wav" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 150
@@ -96,11 +95,6 @@ custom_styles/pressed = SubResource( 8 )
 custom_styles/normal = SubResource( 3 )
 text = "Tutorial"
 script = ExtResource( 3 )
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 6 )
-volume_db = -11.044
-autoplay = true
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="TutorialButton" to="TutorialButton" method="_on_TutorialButton_pressed"]

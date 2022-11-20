@@ -130,14 +130,14 @@ position = Vector2( 359, 98 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 579.0
-margin_top = 11.0
-margin_right = 1014.0
-margin_bottom = 119.0
+margin_left = 421.0
+margin_top = 9.0
+margin_right = 1006.0
+margin_bottom = 117.0
 custom_fonts/font = ExtResource( 6 )
-text = "Slide: (Hold A or D) + S
+text = "Slide to Kill: (Hold A or D) + S
 Attack: Space
-Dodge: (Hold A or D) + Shift"
+Dodge to Protect: (Hold A or D) + Shift"
 align = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

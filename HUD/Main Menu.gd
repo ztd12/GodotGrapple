@@ -20,8 +20,7 @@ func _on_StartButton_pressed():
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("res://HUD/Level Menu.tscn")
 	
-	
-	
+
 func _on_HowToButton_pressed():
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("res://HUD/How To Menu.tscn")

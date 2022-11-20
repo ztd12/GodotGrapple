@@ -45,6 +45,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://Global.gd"
+GlobalAudioScene="*res://HUD/GlobalAudioScene.tscn"
 
 [gui]
 
