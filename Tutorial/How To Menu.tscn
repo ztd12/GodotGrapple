@@ -75,18 +75,18 @@ text = "What to Expect
 [node name="Label3" type="Label" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 716.0
-margin_top = 15.0
-margin_right = 956.0
-margin_bottom = 82.0
+margin_left = 741.0
+margin_top = 13.0
+margin_right = 981.0
+margin_bottom = 80.0
 custom_fonts/font = ExtResource( 3 )
 text = "Controls"
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 628.0
-margin_top = 95.0
-margin_right = 950.0
-margin_bottom = 462.0
+margin_left = 525.0
+margin_top = 86.0
+margin_right = 982.0
+margin_bottom = 578.0
 custom_fonts/font = ExtResource( 4 )
 text = "Move Left: A
 Move Right: D
@@ -95,7 +95,9 @@ Double Jump: W + W
 Slide: (Hold A or D) + S
 Attack: Space
 Dodge: (Hold A or D) + Shift 
-Grapple: Mouse Click"
+Grapple: Mouse Click
+
+  PRO TIP: You can use the arrow keys instead of the WASD keys"
 align = 2
 autowrap = true
 
@@ -108,7 +110,7 @@ custom_fonts/font = ExtResource( 4 )
 text = "Battle enemies to stay alive until timer runs out.
 Defeat big boss at the end of the level.
 Use the grapple feature and jumping to move between platforms and avoid falling.
-Use attack  or slide to kill enemies.
+Use attack or slide to kill enemies.
 Use dodge to protect yourself from enemy attack."
 autowrap = true
 

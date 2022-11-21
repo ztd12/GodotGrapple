@@ -99,7 +99,7 @@ margin_right = 1021.0
 margin_bottom = 212.0
 custom_fonts/font = ExtResource( 5 )
 text = "Use attack or slide to kill an 
-enemy. It takes 2 hits to kill
+enemy. It takes 1 hit to kill
 an enemy.
 "
 align = 2
