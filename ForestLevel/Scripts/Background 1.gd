@@ -1,6 +1,6 @@
 extends Sprite
 
-const VELOCITY: float = -1.0
+const VELOCITY: float = -0.75
 var g_texture_width: float = 0
 
 
