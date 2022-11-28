@@ -15,7 +15,7 @@
 [ext_resource path="res://Enemies/Boss3/Boss3.tscn" type="PackedScene" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 37.0936, 5 )
+extents = Vector2( 52.2124, 5.05619 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 18.6234, 5 )
@@ -61,12 +61,13 @@ position = Vector2( 1.78814e-07, -74.3351 )
 scale = Vector2( 3.81695, 3.91236 )
 
 [node name="Sprite" type="Sprite" parent="platform1"]
-position = Vector2( 37.4644, 163.925 )
-scale = Vector2( 0.0488205, 0.025689 )
+position = Vector2( 53.1511, 164.194 )
+scale = Vector2( 0.0695153, 0.027121 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform1"]
-position = Vector2( 38.2504, 163.925 )
+position = Vector2( 53.3692, 163.981 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="platform2" type="KinematicBody2D" parent="."]
@@ -74,12 +75,12 @@ position = Vector2( 1.78814e-07, -74.3351 )
 scale = Vector2( 3.81695, 3.91236 )
 
 [node name="Sprite" type="Sprite" parent="platform2"]
-position = Vector2( 101.39, 106.671 )
+position = Vector2( 140.688, 104.626 )
 scale = Vector2( 0.0243347, 0.0270482 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform2"]
-position = Vector2( 102.176, 107.182 )
+position = Vector2( 140.426, 104.882 )
 shape = SubResource( 2 )
 
 [node name="platform6" type="KinematicBody2D" parent="."]
@@ -147,7 +148,7 @@ position = Vector2( 766, 23 )
 position = Vector2( 864, 23 )
 
 [node name="Enemy6" parent="." instance=ExtResource( 6 )]
-position = Vector2( 402, 239 )
+position = Vector2( 520, 229 )
 
 [node name="Enemy7" parent="." instance=ExtResource( 6 )]
 position = Vector2( 551, 437 )
@@ -171,6 +172,7 @@ position = Vector2( 946, 14 )
 position = Vector2( 35, 12 )
 
 [node name="Bossman" parent="." instance=ExtResource( 13 )]
+position = Vector2( 61, 412 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 8 )
