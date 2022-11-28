@@ -19,7 +19,7 @@ var speed = -1
 	
 func lose_life():
 	lives -= 1
-	print("&&&&&&&&&&&&&&&&", hud)
+	
 	hud.load_hearts()
 	
 	if lives <= 0:
