@@ -67,7 +67,6 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform1"]
 position = Vector2( 53.3692, 163.981 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="platform2" type="KinematicBody2D" parent="."]
@@ -172,7 +171,7 @@ position = Vector2( 946, 14 )
 position = Vector2( 35, 12 )
 
 [node name="Bossman" parent="." instance=ExtResource( 13 )]
-position = Vector2( 61, 412 )
+position = Vector2( 335, 329 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 8 )
@@ -191,3 +190,5 @@ margin_bottom = 39.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 12 )
 text = "Defeat the big boss to beat the level!"
+
+[connection signal="child_exiting_tree" from="." to="." method="_on_Node2D_child_exiting_tree"]

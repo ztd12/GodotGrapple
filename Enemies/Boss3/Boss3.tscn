@@ -334,7 +334,7 @@ collision_mask = 16
 scale = Vector2( 5, 5 )
 frames = SubResource( 30 )
 animation = "idle"
-frame = 3
+frame = 1
 playing = true
 
 [node name="EnemyHitbox" type="Area2D" parent="."]
