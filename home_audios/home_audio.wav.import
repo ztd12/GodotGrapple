@@ -2,13 +2,11 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/home_audio.wav-f53cdc56d8c35bbb94c2a060ca6713fe.sample"
+valid=false
 
 [deps]
 
 source_file="res://home_audios/home_audio.wav"
-dest_files=[ "res://.import/home_audio.wav-f53cdc56d8c35bbb94c2a060ca6713fe.sample" ]
-
 [params]
 
 force/8_bit=false
